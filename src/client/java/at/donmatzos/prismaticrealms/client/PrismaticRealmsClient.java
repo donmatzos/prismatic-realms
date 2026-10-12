@@ -6,7 +6,10 @@ import net.fabricmc.fabric.api.client.rendering.v1.ClientTooltipComponentCallbac
 import net.fabricmc.fabric.api.client.screen.v1.ScreenEvents;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 
+import at.donmatzos.prismaticrealms.block.ModBlockEntities;
+import at.donmatzos.prismaticrealms.client.altar.SpectralAltarRenderer;
 import at.donmatzos.prismaticrealms.client.artifact.ArtifactBar;
 import at.donmatzos.prismaticrealms.client.mixin.AbstractContainerScreenAccessor;
 import at.donmatzos.prismaticrealms.client.particle.DripParticle;
@@ -26,6 +29,7 @@ public class PrismaticRealmsClient implements ClientModInitializer {
 		ArtifactBar.initialize();
 		ModTooltips.initialize();
 		MenuScreens.register(ModMenus.CRYSTAL_POUCH, CrystalPouchScreen::new);
+		BlockEntityRenderers.register(ModBlockEntities.SPECTRAL_ALTAR, SpectralAltarRenderer::new);
 		ClientTooltipComponentCallback.EVENT.register(data -> data instanceof PouchTooltip pouch ? new ClientPouchTooltip(pouch) : null);
 		ScreenEvents.AFTER_INIT.register((client, screen, width, height) -> {
 			if (screen instanceof AbstractContainerScreen<?> containerScreen) {
