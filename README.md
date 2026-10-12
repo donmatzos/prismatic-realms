@@ -62,6 +62,14 @@ A pouch that keeps your shards and crystals out of the way. Craft it from a bund
 - **Upgrades** at the smithing table double the capacity twice: the **Crystal Pouch +1** (Crystal Pouch Upgrade +1 + a diamond: 1,024 shards and 256 crystals per family) and the **Crystal Pouch +2** (Crystal Pouch Upgrade +2 + a netherite ingot: 2,048 and 512). The upgrades keep the contents.
 - **Upgrade templates:** a Spectral Binder surrounded by one shard of each family and an amethyst shard (+1), or one crystal of each family and an amethyst block (+2).
 
+## Artifacts
+
+You have three artifact slots. Open them with the artifact button next to the recipe book in your inventory, or press **K** (rebindable). An artifact only works while it sits in one of the slots, and each artifact can be worn once at a time. The screen lists the bonuses of everything you have equipped.
+
+Artifacts give passive bonuses, such as extra armour or speed, ongoing effects, or effects when you're hit, attack, mine or kill. Equipped artifacts drop when you die, like the rest of your inventory (`keepInventory` keeps them).
+
+One artifact per crystal family is coming next.
+
 ## Scythes
 
 Scythes are heavy, slow weapons: they hit harder than a sword of the same material, reach further, and sweep like swords. Sword enchantments work on them. In your hand they show a long reaper blade.
