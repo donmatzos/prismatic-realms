@@ -48,7 +48,7 @@ A tool that finds ores for you. Hold the Dowsing Rod in your main hand and what 
 - **A crystal shard, crystal or ore** searches for that family's ore.
 - **A vanilla ore or its material** (coal, raw iron, raw copper, raw gold, redstone, lapis, a diamond, an emerald, nether quartz, ancient debris or netherite scrap) searches for that ore, deepslate and nether variants included.
 
-It scans 32 blocks in every direction and tells you how far away the nearest one is, in which direction and how far up or down, while a short trail of sparkles points the way. Each scan costs 2 durability and needs 3 seconds to recharge. With **Efficiency** it also shows the exact coordinates; Unbreaking and Mending work as usual.
+It scans 32 blocks in every direction and writes into the chat how far away the nearest one is, in which direction and how far up or down, while a short trail of sparkles points the way. Each scan costs 2 durability and needs 3 seconds to recharge. With **Efficiency** it also shows the exact coordinates; Unbreaking and Mending work as usual.
 
 Craft it from any shard, an iron ingot and a stick, stacked in one column. Repair it with a Spectral Binder.
 

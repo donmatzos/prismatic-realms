@@ -34,10 +34,10 @@ import at.donmatzos.prismaticrealms.dowsing.DowsingText;
 
 /**
  * Dowsing Rod: right-click with the rod in the main hand to find the nearest ore matching the off-hand item
- * ({@link DowsingTargets}) within {@link #RANGE} blocks. The result goes to the action bar (distance, compass point,
+ * ({@link DowsingTargets}) within {@link #RANGE} blocks. The result goes to the chat (distance, compass point,
  * height; exact coordinates with Efficiency) and a short particle trail shows the way, visible to the user only. Each
  * scan costs {@link #COST} durability (Unbreaking applies) and starts a {@link #COOLDOWN_TICKS} cooldown; an invalid
- * off hand only shows a hint. Only loaded chunks are scanned.
+ * off hand only shows a hint in the action bar. Only loaded chunks are scanned.
  */
 public class DowsingRodItem extends Item {
 	public static final int RANGE = 32;
@@ -73,9 +73,9 @@ public class DowsingRodItem extends Item {
 			BlockPos found = scan(serverLevel, origin, matcher(target.get()));
 			if (found == null) {
 				Component name = BuiltInRegistries.BLOCK.getValue(Identifier.parse(target.get().displayBlockId())).getName();
-				serverPlayer.sendOverlayMessage(Component.translatable("dowsing.prismaticrealms.none", name, RANGE));
+				serverPlayer.sendSystemMessage(Component.translatable("dowsing.prismaticrealms.none", name, RANGE));
 			} else {
-				serverPlayer.sendOverlayMessage(foundMessage(serverLevel, rod, origin, found));
+				serverPlayer.sendSystemMessage(foundMessage(serverLevel, rod, origin, found));
 				trail(serverLevel, serverPlayer, found);
 			}
 			// cooldown first: if the scan breaks the rod, hurtAndBreak empties the stack and the cooldown would land on air
