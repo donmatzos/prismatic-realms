@@ -30,6 +30,11 @@ public record OpenArtifactsPayload() implements CustomPacketPayload {
 			if (!player.isAlive() || player.isSpectator()) {
 				return;
 			}
+			// opened from the inventory screen: put the cursor item and the 2x2 crafting grid back into the inventory first,
+			// exactly as closing the inventory does (openMenu doesn't close the inventory menu itself)
+			if (player.containerMenu == player.inventoryMenu) {
+				player.inventoryMenu.removed(player);
+			}
 			player.openMenu(new SimpleMenuProvider((id, inventory, opener) -> new ArtifactMenu(id, inventory, new ArtifactContainer(player)),
 					Component.translatable("container.prismaticrealms.artifacts")));
 		});

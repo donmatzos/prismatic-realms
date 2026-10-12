@@ -3,6 +3,7 @@ package at.donmatzos.prismaticrealms.artifact;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.fabricmc.fabric.api.event.Event;
 import net.fabricmc.fabric.api.entity.event.v1.ServerEntityCombatEvents;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
@@ -11,11 +12,14 @@ import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+
+import at.donmatzos.prismaticrealms.PrismaticRealms;
 
 /**
  * Applies equipped artifacts' bonuses. Attribute modifiers are transient and rebuilt by refresh() whenever the slots
@@ -24,6 +28,7 @@ import net.minecraft.world.item.ItemStack;
  */
 public final class ArtifactEffects {
 	private static final int TICK_INTERVAL = 20;
+	private static final Identifier AFTER_ATTACHMENTS = PrismaticRealms.id("after_attachments");
 
 	private ArtifactEffects() {
 	}
@@ -62,7 +67,10 @@ public final class ArtifactEffects {
 
 	public static void initialize() {
 		ServerPlayConnectionEvents.JOIN.register((listener, sender, server) -> refresh(listener.player));
-		ServerPlayerEvents.AFTER_RESPAWN.register((oldPlayer, newPlayer, alive) -> refresh(newPlayer));
+		// Fabric copies the attachment (copyOnDeath) in its own AFTER_RESPAWN listener in the default phase; listener order
+		// within a phase follows mod load order (shuffled in dev), so refresh in a phase that runs after the default one.
+		ServerPlayerEvents.AFTER_RESPAWN.addPhaseOrdering(Event.DEFAULT_PHASE, AFTER_ATTACHMENTS);
+		ServerPlayerEvents.AFTER_RESPAWN.register(AFTER_ATTACHMENTS, (oldPlayer, newPlayer, alive) -> refresh(newPlayer));
 		ServerTickEvents.END_SERVER_TICK.register(server -> {
 			if (server.getTickCount() % TICK_INTERVAL == 0) {
 				for (ServerPlayer player : server.getPlayerList().getPlayers()) {
