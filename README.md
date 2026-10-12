@@ -64,7 +64,7 @@ A pouch that keeps your shards and crystals out of the way. Craft it from a bund
 
 ## Artifacts
 
-You have three artifact slots. Open them with the artifact button next to the recipe book in your inventory, or press **K** (rebindable). An artifact only works while it sits in one of the slots, and each artifact can be worn once at a time. The screen lists the bonuses of everything you have equipped.
+You have three artifact slots. Open them with the artifact button next to the recipe book in your inventory (in creative: on the inventory tab, to the right of the armour), or press **K** (rebindable). An artifact only works while it sits in one of the slots, and each artifact can be worn once at a time. The screen lists the bonuses of everything you have equipped.
 
 Artifacts give passive bonuses, such as extra armour or speed, ongoing effects, or effects when you're hit, attack, mine or kill. Equipped artifacts drop when you die, like the rest of your inventory (`keepInventory` keeps them).
 
