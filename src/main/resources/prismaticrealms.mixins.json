@@ -6,7 +6,8 @@
 		"ExampleMixin",
 		"ItemEntityPouchMixin",
 		"PlayerArtifactDropMixin",
-		"InventoryMenuArtifactMixin"
+		"InventoryMenuArtifactMixin",
+		"CreativeArtifactSlotMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

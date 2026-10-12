@@ -2,7 +2,10 @@
 	"required": true,
 	"package": "at.donmatzos.prismaticrealms.client.mixin",
 	"compatibilityLevel": "JAVA_25",
-	"client": ["AbstractContainerScreenAccessor"],
+	"client": ["AbstractContainerScreenAccessor",
+		"SlotPositionAccessor",
+		"CreativeScreenArtifactMixin",
+		"RecipeBookScreenArtifactMixin"],
 	"injectors": {
 		"defaultRequire": 1
 	},
