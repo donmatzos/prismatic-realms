@@ -18,4 +18,7 @@ public interface AbstractContainerScreenAccessor {
 
 	@Accessor("topPos")
 	int prismaticrealms$getTopPos();
+
+	@Accessor("imageWidth")
+	int prismaticrealms$getImageWidth();
 }

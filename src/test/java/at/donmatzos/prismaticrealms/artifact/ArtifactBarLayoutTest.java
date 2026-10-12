@@ -45,4 +45,11 @@ class ArtifactBarLayoutTest {
 		assertTrue(ArtifactBarLayout.CREATIVE.slotX() >= 195);
 		assertTrue(ArtifactBarLayout.CREATIVE.panelX() < 195);
 	}
+
+	@Test
+	void overhangPastTheWindowsRightEdge() {
+		// the effect list (drawn right of the window) has to move this far to clear the bar
+		assertEquals(25, ArtifactBarLayout.rightOverhang(ArtifactBarLayout.SURVIVAL, 176));
+		assertEquals(25, ArtifactBarLayout.rightOverhang(ArtifactBarLayout.CREATIVE, 195));
+	}
 }

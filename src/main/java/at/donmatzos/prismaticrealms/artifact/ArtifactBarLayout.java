@@ -43,4 +43,9 @@ public final class ArtifactBarLayout {
 		}
 		return false;
 	}
+
+	/** How far the bar sticks out past the window's right edge (things drawn right of the window must move this far). */
+	public static int rightOverhang(Layout layout, int imageWidth) {
+		return layout.panelX() + PANEL_WIDTH - imageWidth;
+	}
 }

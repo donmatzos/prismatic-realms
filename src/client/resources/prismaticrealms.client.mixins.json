@@ -5,7 +5,8 @@
 	"client": ["AbstractContainerScreenAccessor",
 		"SlotPositionAccessor",
 		"CreativeScreenArtifactMixin",
-		"RecipeBookScreenArtifactMixin"],
+		"RecipeBookScreenArtifactMixin",
+		"EffectsInInventoryArtifactMixin"],
 	"injectors": {
 		"defaultRequire": 1
 	},
