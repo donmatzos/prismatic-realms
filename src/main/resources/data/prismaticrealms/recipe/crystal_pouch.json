@@ -1,0 +1,11 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"category": "equipment",
+	"ingredients": [
+		"minecraft:bundle",
+		"prismaticrealms:spectral_binder"
+	],
+	"result": {
+		"id": "prismaticrealms:crystal_pouch"
+	}
+}

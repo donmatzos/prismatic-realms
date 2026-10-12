@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
+	"key": {
+		"m": "#minecraft:diamond_tool_materials",
+		"b": "prismaticrealms:spectral_binder",
+		"s": "minecraft:stick"
+	},
+	"pattern": [
+		" mb",
+		"m s",
+		"  s"
+	],
+	"result": {
+		"id": "prismaticrealms:diamond_scythe"
+	}
+}

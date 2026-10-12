@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"has_venom_crown_crystal": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "prismaticrealms:venom_crown_crystal"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipes": "prismaticrealms:scorpion_tail"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_the_recipe",
+			"has_venom_crown_crystal"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"prismaticrealms:scorpion_tail"
+		]
+	}
+}

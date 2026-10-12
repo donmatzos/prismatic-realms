@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "prismaticrealms:block/venom_crown_ore"
+  }
+}

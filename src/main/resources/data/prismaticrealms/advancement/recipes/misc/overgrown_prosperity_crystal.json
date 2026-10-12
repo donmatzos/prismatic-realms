@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"has_overgrown_prosperity_shard": {
+			"conditions": {
+				"items": [
+					{
+						"items": "prismaticrealms:overgrown_prosperity_shard"
+					}
+				]
+			},
+			"trigger": "minecraft:inventory_changed"
+		},
+		"has_the_recipe": {
+			"conditions": {
+				"recipes": "prismaticrealms:overgrown_prosperity_crystal"
+			},
+			"trigger": "minecraft:recipe_unlocked"
+		}
+	},
+	"requirements": [
+		[
+			"has_the_recipe",
+			"has_overgrown_prosperity_shard"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"prismaticrealms:overgrown_prosperity_crystal"
+		]
+	}
+}

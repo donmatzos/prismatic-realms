@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
+	"key": {
+		"s": "#prismaticrealms:shards",
+		"i": "minecraft:iron_ingot",
+		"t": "minecraft:stick"
+	},
+	"pattern": [
+		"s",
+		"i",
+		"t"
+	],
+	"result": {
+		"id": "prismaticrealms:dowsing_rod"
+	}
+}

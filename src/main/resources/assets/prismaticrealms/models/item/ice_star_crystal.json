@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "prismaticrealms:item/ice_star_crystal"
+	}
+}

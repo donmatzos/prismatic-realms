@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"key": {
+		"r": "prismaticrealms:crimson_sanguis_crystal",
+		"o": "prismaticrealms:cruel_sun_crystal",
+		"y": "prismaticrealms:storm_fang_crystal",
+		"g": "prismaticrealms:overgrown_prosperity_crystal",
+		"b": "prismaticrealms:ice_star_crystal",
+		"i": "prismaticrealms:cerulean_abyss_crystal",
+		"v": "prismaticrealms:venom_crown_crystal",
+		"+": "prismaticrealms:spectral_binder",
+		"a": "minecraft:amethyst_block"
+	},
+	"pattern": [
+		"ygb",
+		"o+i",
+		"rav"
+	],
+	"result": {
+		"id": "prismaticrealms:crystal_pouch_upgrade_plus_two"
+	}
+}

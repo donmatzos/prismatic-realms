@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "prismaticrealms:block/overgrown_prosperity_ore"
+  }
+}

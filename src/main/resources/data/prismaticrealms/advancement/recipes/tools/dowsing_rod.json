@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"has_shard": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "#prismaticrealms:shards"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipes": "prismaticrealms:dowsing_rod"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_the_recipe",
+			"has_shard"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"prismaticrealms:dowsing_rod"
+		]
+	}
+}

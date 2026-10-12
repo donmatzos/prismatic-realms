@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"has_venom_crown_shard": {
+			"conditions": {
+				"items": [
+					{
+						"items": "prismaticrealms:venom_crown_shard"
+					}
+				]
+			},
+			"trigger": "minecraft:inventory_changed"
+		},
+		"has_the_recipe": {
+			"conditions": {
+				"recipes": "prismaticrealms:venom_crown_crystal"
+			},
+			"trigger": "minecraft:recipe_unlocked"
+		}
+	},
+	"requirements": [
+		[
+			"has_the_recipe",
+			"has_venom_crown_shard"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"prismaticrealms:venom_crown_crystal"
+		]
+	}
+}

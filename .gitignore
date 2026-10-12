@@ -1,0 +1,62 @@
+# gradle
+
+.gradle/
+build/
+out/
+classes/
+
+# eclipse
+
+*.launch
+
+# idea
+
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# vscode
+
+.settings/
+.vscode/
+bin/
+.classpath
+.project
+
+# macos
+
+*.DS_Store
+
+# fabric
+
+run/
+
+# java
+
+hs_err_*.log
+replay_*.log
+*.hprof
+*.jfr
+
+# project context (local notes, not versioned)
+
+CLAUDE.md
+context/
+
+# set-aside sprites and short-blade in-hand backups (local only)
+
+unused-item-sprites/
+
+# agent workspaces (local only)
+
+.superpowers/
+
+# design specs and implementation plans (local only)
+
+docs/
+
+# python bytecode
+
+__pycache__/
+*.pyc

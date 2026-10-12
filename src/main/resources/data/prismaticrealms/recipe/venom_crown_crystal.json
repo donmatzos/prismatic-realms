@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"key": {
+		"b": "prismaticrealms:spectral_binder",
+		"c": "prismaticrealms:venom_crown_shard"
+	},
+	"pattern": [
+		" c ",
+		"cbc",
+		" c "
+	],
+	"result": {
+		"id": "prismaticrealms:venom_crown_crystal"
+	}
+}

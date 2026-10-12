@@ -1,0 +1,7 @@
+// 26.3	-999999999-01-01T00:00:00	Prismatic Realms/Tags for minecraft:item
+407e3b70a3fb2a1510226b2aea40a7ede3f47341 data/minecraft/tags/item/enchantable/durability.json
+407e3b70a3fb2a1510226b2aea40a7ede3f47341 data/minecraft/tags/item/enchantable/mining.json
+97a72dc9086e971a940da6afeb3792a0af028a09 data/minecraft/tags/item/swords.json
+700c75b5f031c319b6cba26ad7e97123de41479f data/prismaticrealms/tags/item/high_tier_pickaxes.json
+898922b959d80ca0c5841cf566f52066def7704e data/prismaticrealms/tags/item/low_tier_pickaxes.json
+94789b8e601386f1eb416d596214f38f89dd4d6d data/prismaticrealms/tags/item/scythes.json

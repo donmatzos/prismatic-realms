@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"key": {
+		"b": "prismaticrealms:spectral_binder",
+		"c": "prismaticrealms:storm_fang_shard"
+	},
+	"pattern": [
+		" c ",
+		"cbc",
+		" c "
+	],
+	"result": {
+		"id": "prismaticrealms:storm_fang_crystal"
+	}
+}

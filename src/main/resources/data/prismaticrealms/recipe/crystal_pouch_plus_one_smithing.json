@@ -1,0 +1,9 @@
+{
+	"type": "minecraft:smithing_transform",
+	"template": "prismaticrealms:crystal_pouch_upgrade_plus_one",
+	"base": "prismaticrealms:crystal_pouch",
+	"addition": "minecraft:diamond",
+	"result": {
+		"id": "prismaticrealms:crystal_pouch_plus_one"
+	}
+}

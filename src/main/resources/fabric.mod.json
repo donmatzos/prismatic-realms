@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "prismaticrealms",
+	"version": "${version}",
+	"name": "Prismatic Realms",
+	"description": "Rainbow-themed crystal families, crystal ores, scythes with charged-hit effects, and quality-of-life tools like the Dowsing Rod and the Crystal Pouch.",
+	"authors": [
+		"donmatzos"
+	],
+	"contact": {
+		"homepage": "https://github.com/donmatzos/prismatic-realms",
+		"sources": "https://github.com/donmatzos/prismatic-realms",
+		"issues": "https://github.com/donmatzos/prismatic-realms/issues"
+	},
+	"license": "MIT",
+	"icon": "assets/prismaticrealms/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"at.donmatzos.prismaticrealms.PrismaticRealms"
+		],
+		"client": [
+			"at.donmatzos.prismaticrealms.client.PrismaticRealmsClient"
+		],
+		"fabric-datagen": [
+			"at.donmatzos.prismaticrealms.client.datagen.PrismaticRealmsDataGenerator"
+		]
+	},
+	"mixins": [
+		"prismaticrealms.mixins.json",
+		{
+			"config": "prismaticrealms.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

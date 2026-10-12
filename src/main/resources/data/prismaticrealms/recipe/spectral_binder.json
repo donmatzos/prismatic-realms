@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"category": "misc",
+	"ingredients": [
+		"#prismaticrealms:shards",
+		"#prismaticrealms:binding_agents"
+	],
+	"result": {
+		"count": 2,
+		"id": "prismaticrealms:spectral_binder"
+	}
+}

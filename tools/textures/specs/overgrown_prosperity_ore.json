@@ -1,0 +1,41 @@
+{
+ "base": "stone",
+ "palette": {
+  ".": null,
+  "o": "#0f2e18",
+  "d": "#1e6a33",
+  "m": "#3aa64c",
+  "l": "#7bd866",
+  "h": "#c6f5a6",
+  "w": "#f2ffe6",
+  "s": "#3f5f1a",
+  "t": "#6b9426",
+  "u": "#9cc43c",
+  "b": "#5a3b22",
+  "B": "#7d5534"
+ },
+ "tints": {
+  "q": {
+   "color": "#3f5f1a",
+   "strength": 0.45
+  }
+ },
+ "pixels": [
+  "................",
+  "................",
+  "................",
+  ".....q.q..q.....",
+  "....qqqus.q.....",
+  ".....uuustq.q...",
+  "..qussstttuusq..",
+  ".qqusssswsssuqq.",
+  ".q.stssmlhssuq..",
+  ".q..ttsdmssstq..",
+  "..qqutusstutu...",
+  "....qstttsstq...",
+  ".....tutsq.bBb..",
+  ".....q..q....Bb.",
+  "..............B.",
+  "..............b."
+ ]
+}

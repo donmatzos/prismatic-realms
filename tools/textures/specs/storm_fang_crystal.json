@@ -1,0 +1,31 @@
+{
+ "palette": {
+  ".": null,
+  "o": "#3e2a05",
+  "d": "#a86f08",
+  "m": "#e0a814",
+  "l": "#f8d838",
+  "h": "#fff3a0",
+  "w": "#ffffff",
+  "c": "#9ff0ff",
+  "C": "#4cc8e0"
+ },
+ "pixels": [
+  ".......oooooo...",
+  "......ollllldo..",
+  "......olhhhdo...",
+  ".....olhwwddo...",
+  "....ollhwhdo...c",
+  "....olhwhddooo..",
+  "...ollhwhdllldo.",
+  ".c.olhhhhhhddo..",
+  "..oldddllhddo...",
+  "...oooollddo..C.",
+  "......olddo.c...",
+  "..c..oldoo......",
+  ".....odo........",
+  "....olo.........",
+  ".....o..........",
+  "................"
+ ]
+}

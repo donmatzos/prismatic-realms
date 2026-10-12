@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"has_spectral_binder": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "prismaticrealms:spectral_binder"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipes": "prismaticrealms:copper_scythe"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_the_recipe",
+			"has_spectral_binder"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"prismaticrealms:copper_scythe"
+		]
+	}
+}

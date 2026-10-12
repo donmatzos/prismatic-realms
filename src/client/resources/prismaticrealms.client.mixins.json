@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"package": "at.donmatzos.prismaticrealms.client.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": ["AbstractContainerScreenAccessor"],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

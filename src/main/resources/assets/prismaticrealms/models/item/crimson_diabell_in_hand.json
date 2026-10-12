@@ -1,0 +1,6 @@
+{
+	"parent": "prismaticrealms:item/scythe_in_hand",
+	"textures": {
+		"layer0": "prismaticrealms:item/crimson_diabell_in_hand"
+	}
+}

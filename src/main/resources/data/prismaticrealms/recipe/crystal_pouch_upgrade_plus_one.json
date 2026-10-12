@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"key": {
+		"r": "prismaticrealms:crimson_sanguis_shard",
+		"o": "prismaticrealms:cruel_sun_shard",
+		"y": "prismaticrealms:storm_fang_shard",
+		"g": "prismaticrealms:overgrown_prosperity_shard",
+		"b": "prismaticrealms:ice_star_shard",
+		"i": "prismaticrealms:cerulean_abyss_shard",
+		"v": "prismaticrealms:venom_crown_shard",
+		"+": "prismaticrealms:spectral_binder",
+		"a": "minecraft:amethyst_shard"
+	},
+	"pattern": [
+		"ygb",
+		"o+i",
+		"rav"
+	],
+	"result": {
+		"id": "prismaticrealms:crystal_pouch_upgrade_plus_one"
+	}
+}

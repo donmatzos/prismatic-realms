@@ -1,0 +1,9 @@
+{
+	"type": "minecraft:smithing_transform",
+	"template": "prismaticrealms:crystal_pouch_upgrade_plus_two",
+	"base": "prismaticrealms:crystal_pouch_plus_one",
+	"addition": "minecraft:netherite_ingot",
+	"result": {
+		"id": "prismaticrealms:crystal_pouch_plus_two"
+	}
+}

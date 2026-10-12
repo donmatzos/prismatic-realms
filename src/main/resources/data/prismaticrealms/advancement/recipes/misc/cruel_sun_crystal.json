@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"has_cruel_sun_shard": {
+			"conditions": {
+				"items": [
+					{
+						"items": "prismaticrealms:cruel_sun_shard"
+					}
+				]
+			},
+			"trigger": "minecraft:inventory_changed"
+		},
+		"has_the_recipe": {
+			"conditions": {
+				"recipes": "prismaticrealms:cruel_sun_crystal"
+			},
+			"trigger": "minecraft:recipe_unlocked"
+		}
+	},
+	"requirements": [
+		[
+			"has_the_recipe",
+			"has_cruel_sun_shard"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"prismaticrealms:cruel_sun_crystal"
+		]
+	}
+}

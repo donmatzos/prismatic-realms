@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
+	"key": {
+		"m": "prismaticrealms:overgrown_prosperity_crystal",
+		"b": "prismaticrealms:spectral_binder",
+		"s": "minecraft:stick"
+	},
+	"pattern": [
+		" mb",
+		"m s",
+		"  s"
+	],
+	"result": {
+		"id": "prismaticrealms:overgrown_reaper"
+	}
+}

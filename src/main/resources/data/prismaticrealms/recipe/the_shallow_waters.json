@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
+	"key": {
+		"m": "prismaticrealms:cerulean_abyss_crystal",
+		"b": "prismaticrealms:spectral_binder",
+		"s": "minecraft:stick"
+	},
+	"pattern": [
+		" mb",
+		"m s",
+		"  s"
+	],
+	"result": {
+		"id": "prismaticrealms:the_shallow_waters"
+	}
+}

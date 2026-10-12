@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "prismaticrealms:block/deepslate_cerulean_abyss_ore"
+  }
+}
