@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
+import net.minecraft.client.data.models.model.ModelLocationUtils;
 
 import at.donmatzos.prismaticrealms.block.ModBlocks;
 
@@ -20,6 +21,9 @@ public class ModModelProvider extends FabricModelProvider {
 			generators.createTrivialCube(ore.stone());
 			generators.createTrivialCube(ore.deepslate());
 		}
+		// The block model is hand-written (enchanting-table shape); only the blockstate and item definition are generated.
+		generators.createNonTemplateModelBlock(ModBlocks.SPECTRAL_ALTAR);
+		generators.registerSimpleItemModel(ModBlocks.SPECTRAL_ALTAR, ModelLocationUtils.getModelLocation(ModBlocks.SPECTRAL_ALTAR));
 	}
 
 	@Override

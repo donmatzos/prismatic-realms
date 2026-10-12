@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"key": {
+		"B": "prismaticrealms:spectral_binder",
+		"C": "#prismaticrealms:crystals",
+		"O": "minecraft:obsidian"
+	},
+	"pattern": [
+		" B ",
+		"COC",
+		"OOO"
+	],
+	"result": {
+		"id": "prismaticrealms:spectral_altar"
+	}
+}

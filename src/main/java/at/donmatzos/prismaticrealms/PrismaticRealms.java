@@ -6,6 +6,7 @@ import net.minecraft.resources.Identifier;
 
 import at.donmatzos.prismaticrealms.artifact.ArtifactEffects;
 import at.donmatzos.prismaticrealms.artifact.ArtifactSlots;
+import at.donmatzos.prismaticrealms.block.ModBlockEntities;
 import at.donmatzos.prismaticrealms.block.ModBlocks;
 import at.donmatzos.prismaticrealms.effect.ModEffects;
 import at.donmatzos.prismaticrealms.item.ChargedHitScytheItem;
@@ -46,6 +47,7 @@ public class PrismaticRealms implements ModInitializer {
 		ChargedHitScytheItem.initialize();
 		ScytheHarvest.initialize();
 		ModBlocks.initialize();
+		ModBlockEntities.initialize();
 		ModCreativeTabs.initialize();
 		ModWorldGen.initialize();
 	}
