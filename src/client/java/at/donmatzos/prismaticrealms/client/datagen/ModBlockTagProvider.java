@@ -29,5 +29,7 @@ public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
 				this.builder(ModTags.CRYSTAL_ORES).add(key);
 			}
 		}
+		// Any pickaxe, like the enchanting table.
+		this.builder(BlockTags.MINEABLE_WITH_PICKAXE).add(BuiltInRegistries.BLOCK.getResourceKey(ModBlocks.SPECTRAL_ALTAR).orElseThrow());
 	}
 }

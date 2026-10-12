@@ -106,6 +106,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 			translations.add(ore.stone(), name + " Ore");
 			translations.add(ore.deepslate(), "Deepslate " + name + " Ore");
 		}
+		translations.add(ModBlocks.SPECTRAL_ALTAR, "Spectral Altar");
 	}
 
 	// "cerulean_abyss" -> "Cerulean Abyss"

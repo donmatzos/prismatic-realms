@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"has_crystal": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "#prismaticrealms:crystals"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipes": "prismaticrealms:spectral_altar"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_the_recipe",
+			"has_crystal"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"prismaticrealms:spectral_altar"
+		]
+	}
+}

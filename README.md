@@ -70,6 +70,12 @@ Artifacts give passive bonuses, such as extra armour or speed, ongoing effects, 
 
 One artifact per crystal family is coming next.
 
+### Spectral Altar
+
+The future artifact station, built like an enchanting table in the Spectral Binder's colours: dark lavender stone with a rainbow inlay and corner pillars, and a pale top with a rainbow ring. Above it floats a glowing Spectral Binder, circled by one shard of every family in rainbow order. They orbit faster when you come close. It gives off light like an enchanting table and can be mined with any pickaxe.
+
+Craft it like an enchanting table, with a Spectral Binder in place of the book and two crystals (of any family) in place of the diamonds, over four obsidian. The recipe unlocks once you pick up a crystal. Crafting artifacts at the altar comes in a later update.
+
 ## Scythes
 
 Scythes are heavy, slow weapons: they hit harder than a sword of the same material, reach further, and sweep like swords. Sword enchantments work on them. In your hand they show a long reaper blade.
