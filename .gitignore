@@ -60,3 +60,7 @@ docs/
 
 __pycache__/
 *.pyc
+
+# texture generation tools (local only)
+
+tools/
