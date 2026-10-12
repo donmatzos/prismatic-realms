@@ -13,6 +13,8 @@
   "block.prismaticrealms.overgrown_prosperity_ore": "Overgrown Prosperity Ore",
   "block.prismaticrealms.storm_fang_ore": "Storm Fang Ore",
   "block.prismaticrealms.venom_crown_ore": "Venom Crown Ore",
+  "container.prismaticrealms.artifacts": "Artifacts",
+  "container.prismaticrealms.artifacts.none": "No artifacts equipped",
   "container.prismaticrealms.crystal_pouch.amount": "%1$s: %2$s / %3$s",
   "dowsing.prismaticrealms.coords": " (x %1$s, y %2$s, z %3$s)",
   "dowsing.prismaticrealms.direction.east": "east",
@@ -37,6 +39,7 @@
   "effect.prismaticrealms.radiance": "Radiance",
   "effect.prismaticrealms.tidecaller": "Tidecaller",
   "effect.prismaticrealms.venom_stack": "Venom Stack",
+  "item.prismaticrealms.artifact": "Artifact (wear it in an artifact slot)",
   "item.prismaticrealms.blitz_slasher": "Blitz Slasher",
   "item.prismaticrealms.blitz_slasher.effect": "Blitz Rush – you move 50% faster for 3s",
   "item.prismaticrealms.cerulean_abyss_crystal": "Cerulean Abyss Crystal",
@@ -80,10 +83,14 @@
   "item.prismaticrealms.stone_scythe": "Stone Scythe",
   "item.prismaticrealms.storm_fang_crystal": "Storm Fang Crystal",
   "item.prismaticrealms.storm_fang_shard": "Storm Fang Shard",
+  "item.prismaticrealms.test_artifact": "Test Artifact",
+  "item.prismaticrealms.test_artifact.bonus": "Test Artifact – +1 armour",
   "item.prismaticrealms.the_shallow_waters": "The Shallow Waters",
   "item.prismaticrealms.the_shallow_waters.effect": "Tidecaller – Dolphin's Grace and Water Breathing for 8s; in water, hits heal you",
   "item.prismaticrealms.venom_crown_crystal": "Venom Crown Crystal",
   "item.prismaticrealms.venom_crown_shard": "Venom Crown Shard",
   "item.prismaticrealms.wooden_scythe": "Wooden Scythe",
-  "itemGroup.prismaticrealms.prismatic_realms": "Prismatic Realms"
+  "itemGroup.prismaticrealms.prismatic_realms": "Prismatic Realms",
+  "key.category.prismaticrealms.prismaticrealms": "Prismatic Realms",
+  "key.prismaticrealms.artifacts": "Open Artifacts"
 }

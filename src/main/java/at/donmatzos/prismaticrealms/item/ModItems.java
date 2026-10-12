@@ -17,6 +17,7 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.component.AttackRange;
 
 import at.donmatzos.prismaticrealms.PrismaticRealms;
+import at.donmatzos.prismaticrealms.artifact.TestArtifactItem;
 import at.donmatzos.prismaticrealms.pouch.ModComponents;
 import at.donmatzos.prismaticrealms.pouch.PouchContents;
 
@@ -80,6 +81,8 @@ public final class ModItems {
 	public static final Item CRYSTAL_POUCH_UPGRADE_PLUS_ONE = register("crystal_pouch_upgrade_plus_one", Item::new, new Item.Properties());
 	public static final Item CRYSTAL_POUCH_UPGRADE_PLUS_TWO = register("crystal_pouch_upgrade_plus_two", Item::new,
 			new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true));
+	// Creative-only artifact for testing the artifact system (+1 armour while equipped); not craftable.
+	public static final Item TEST_ARTIFACT = register("test_artifact", TestArtifactItem::new, new Item.Properties());
 
 	private ModItems() {
 	}

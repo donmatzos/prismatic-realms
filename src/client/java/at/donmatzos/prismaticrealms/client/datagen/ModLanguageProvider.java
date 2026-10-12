@@ -68,6 +68,13 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 		translations.add("item.prismaticrealms.crystal_pouch.stored", "Stored: %1$s shards · %2$s crystals");
 		translations.add("item.prismaticrealms.crystal_pouch_upgrade.tooltip", "Smithing template for the Crystal Pouch");
 		translations.add("container.prismaticrealms.crystal_pouch.amount", "%1$s: %2$s / %3$s");
+		translations.add(ModItems.TEST_ARTIFACT, "Test Artifact");
+		translations.add("item.prismaticrealms.test_artifact.bonus", "Test Artifact – +1 armour");
+		translations.add("item.prismaticrealms.artifact", "Artifact (wear it in an artifact slot)");
+		translations.add("container.prismaticrealms.artifacts", "Artifacts");
+		translations.add("container.prismaticrealms.artifacts.none", "No artifacts equipped");
+		translations.add("key.prismaticrealms.artifacts", "Open Artifacts");
+		translations.add("key.category.prismaticrealms.prismaticrealms", "Prismatic Realms");
 		translations.add("dowsing.prismaticrealms.found", "%1$s: %2$s blocks · %3$s · %4$s");
 		translations.add("dowsing.prismaticrealms.coords", " (x %1$s, y %2$s, z %3$s)");
 		translations.add("dowsing.prismaticrealms.none", "No %1$s within %2$s blocks");
