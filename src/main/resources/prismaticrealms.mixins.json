@@ -4,7 +4,10 @@
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
 		"ExampleMixin",
-		"ItemEntityPouchMixin"
+		"ItemEntityPouchMixin",
+		"PlayerArtifactDropMixin",
+		"InventoryMenuArtifactMixin",
+		"CreativeArtifactSlotMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

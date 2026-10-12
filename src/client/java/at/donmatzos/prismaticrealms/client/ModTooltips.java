@@ -11,6 +11,7 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Style;
 import net.minecraft.network.chat.TextColor;
 
+import at.donmatzos.prismaticrealms.artifact.ArtifactItem;
 import at.donmatzos.prismaticrealms.item.ChargedHitScytheItem;
 import at.donmatzos.prismaticrealms.item.CrystalPouchItem;
 import at.donmatzos.prismaticrealms.item.ModItems;
@@ -56,6 +57,9 @@ public final class ModTooltips {
 						PouchText.grouped(storage.total(false)), PouchText.grouped(storage.total(true))).getString(), GREY))));
 			} else if (stack.is(ModItems.CRYSTAL_POUCH_UPGRADE_PLUS_ONE) || stack.is(ModItems.CRYSTAL_POUCH_UPGRADE_PLUS_TWO)) {
 				extra.addAll(wrap(List.of(new Segment(Component.translatable("item.prismaticrealms.crystal_pouch_upgrade.tooltip").getString(), GREY))));
+			} else if (stack.getItem() instanceof ArtifactItem artifact) {
+				extra.addAll(wrap(List.of(new Segment(Component.translatable("item.prismaticrealms.artifact").getString(), GREY))));
+				extra.addAll(wrap(List.of(new Segment(Component.translatable(artifact.bonusKey()).getString(), Style.EMPTY.withColor(ChatFormatting.LIGHT_PURPLE)))));
 			}
 			lines.addAll(1, extra);
 		});
