@@ -13,7 +13,7 @@
   "block.prismaticrealms.overgrown_prosperity_ore": "Overgrown Prosperity Ore",
   "block.prismaticrealms.storm_fang_ore": "Storm Fang Ore",
   "block.prismaticrealms.venom_crown_ore": "Venom Crown Ore",
-  "container.prismaticrealms.artifacts": "Artifacts",
+  "container.prismaticrealms.artifacts": "Artifact bonuses",
   "container.prismaticrealms.artifacts.none": "No artifacts equipped",
   "container.prismaticrealms.crystal_pouch.amount": "%1$s: %2$s / %3$s",
   "dowsing.prismaticrealms.coords": " (x %1$s, y %2$s, z %3$s)",
@@ -90,7 +90,5 @@
   "item.prismaticrealms.venom_crown_crystal": "Venom Crown Crystal",
   "item.prismaticrealms.venom_crown_shard": "Venom Crown Shard",
   "item.prismaticrealms.wooden_scythe": "Wooden Scythe",
-  "itemGroup.prismaticrealms.prismatic_realms": "Prismatic Realms",
-  "key.category.prismaticrealms.prismaticrealms": "Prismatic Realms",
-  "key.prismaticrealms.artifacts": "Open Artifacts"
+  "itemGroup.prismaticrealms.prismatic_realms": "Prismatic Realms"
 }

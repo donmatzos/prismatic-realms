@@ -19,7 +19,7 @@ public class ArtifactSlot extends Slot {
 		super(artifacts, index, x, y);
 	}
 
-	static List<String> equippedIds(Container artifacts) {
+	public static List<String> equippedIds(Container artifacts) {
 		List<String> ids = new ArrayList<>();
 		for (int i = 0; i < ArtifactRules.SLOTS; i++) {
 			ItemStack stack = artifacts.getItem(i);

@@ -5,7 +5,8 @@
 	"mixins": [
 		"ExampleMixin",
 		"ItemEntityPouchMixin",
-		"PlayerArtifactDropMixin"
+		"PlayerArtifactDropMixin",
+		"InventoryMenuArtifactMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

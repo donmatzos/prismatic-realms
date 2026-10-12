@@ -5,12 +5,22 @@ import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 
-/** The server's view of a player's artifact slots as a Container: reads and replaces the attachment value. */
+/**
+ * The view of a player's artifact slots as a Container, on both sides: the server's copy is authoritative and refreshes
+ * bonuses; the client's copy is the synced attachment, so click prediction matches.
+ */
 public class ArtifactContainer implements Container {
-	private final ServerPlayer player;
+	private final Player player;
 
-	public ArtifactContainer(ServerPlayer player) {
+	public ArtifactContainer(Player player) {
 		this.player = player;
+	}
+
+	/** Only the server recalculates bonuses; the client only mirrors the slots for click prediction. */
+	private void refresh() {
+		if (this.player instanceof ServerPlayer serverPlayer) {
+			ArtifactEffects.refresh(serverPlayer);
+		}
 	}
 
 	@Override
@@ -46,7 +56,7 @@ public class ArtifactContainer implements Container {
 	@Override
 	public void setItem(int slot, ItemStack stack) {
 		ArtifactSlots.set(this.player, ArtifactSlots.of(this.player).with(slot, stack));
-		ArtifactEffects.refresh(this.player);
+		this.refresh();
 	}
 
 	@Override
@@ -61,6 +71,6 @@ public class ArtifactContainer implements Container {
 	@Override
 	public void clearContent() {
 		ArtifactSlots.set(this.player, ArtifactSlots.EMPTY);
-		ArtifactEffects.refresh(this.player);
+		this.refresh();
 	}
 }

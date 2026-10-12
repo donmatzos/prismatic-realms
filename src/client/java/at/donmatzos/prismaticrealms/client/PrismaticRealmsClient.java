@@ -7,10 +7,6 @@ import net.fabricmc.fabric.api.client.screen.v1.ScreenEvents;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 
-import at.donmatzos.prismaticrealms.artifact.ModArtifactMenus;
-import at.donmatzos.prismaticrealms.client.artifact.ArtifactButton;
-import at.donmatzos.prismaticrealms.client.artifact.ArtifactKeys;
-import at.donmatzos.prismaticrealms.client.artifact.ArtifactScreen;
 import at.donmatzos.prismaticrealms.client.mixin.AbstractContainerScreenAccessor;
 import at.donmatzos.prismaticrealms.client.particle.DripParticle;
 import at.donmatzos.prismaticrealms.client.particle.LeechSporeParticle;
@@ -26,9 +22,6 @@ import at.donmatzos.prismaticrealms.pouch.PouchTooltip;
 public class PrismaticRealmsClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
-		MenuScreens.register(ModArtifactMenus.ARTIFACTS, ArtifactScreen::new);
-		ArtifactKeys.initialize();
-		ArtifactButton.initialize();
 		ModTooltips.initialize();
 		MenuScreens.register(ModMenus.CRYSTAL_POUCH, CrystalPouchScreen::new);
 		ClientTooltipComponentCallback.EVENT.register(data -> data instanceof PouchTooltip pouch ? new ClientPouchTooltip(pouch) : null);
