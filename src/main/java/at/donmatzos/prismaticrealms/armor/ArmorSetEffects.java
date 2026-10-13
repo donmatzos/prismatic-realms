@@ -72,6 +72,15 @@ public final class ArmorSetEffects {
 		}
 	}
 
+	/** Drops the player's tracked set and lets its bonus clear any per-player state (join, respawn and disconnect). */
+	private static void forget(ServerPlayer player) {
+		CrystalFamily family = ACTIVE.remove(player.getUUID());
+		SetBonus bonus = family == null ? null : BONUSES.get(family);
+		if (bonus != null) {
+			bonus.onDeactivate(player);
+		}
+	}
+
 	/** True when this wearer's set lets the just-saving artifact stay in its slot (the Sanguis set's Chalice roll). */
 	public static boolean keepsArtifact(ServerPlayer wearer, ArtifactItem artifact) {
 		CrystalFamily family = ArmorSets.of(wearer);
@@ -97,14 +106,9 @@ public final class ArmorSetEffects {
 		register(CrystalFamily.CERULEAN_ABYSS, new DeepDiver());
 		register(CrystalFamily.CRIMSON_SANGUIS, new SanguineVessel());
 		register(CrystalFamily.VENOM_CROWN, new ToxicCoat());
-		ServerPlayConnectionEvents.JOIN.register((listener, sender, server) -> ACTIVE.remove(listener.player.getUUID()));
-		ServerPlayerEvents.AFTER_RESPAWN.register((oldPlayer, newPlayer, alive) -> ACTIVE.remove(newPlayer.getUUID()));
-		ServerPlayConnectionEvents.DISCONNECT.register((listener, server) -> {
-			CrystalFamily family = ACTIVE.remove(listener.player.getUUID());
-			if (family != null && BONUSES.get(family) != null) {
-				BONUSES.get(family).onDeactivate(listener.player);
-			}
-		});
+		ServerPlayConnectionEvents.JOIN.register((listener, sender, server) -> forget(listener.player));
+		ServerPlayerEvents.AFTER_RESPAWN.register((oldPlayer, newPlayer, alive) -> forget(oldPlayer));
+		ServerPlayConnectionEvents.DISCONNECT.register((listener, server) -> forget(listener.player));
 		ServerTickEvents.END_SERVER_TICK.register(server -> {
 			for (ServerPlayer player : server.getPlayerList().getPlayers()) {
 				CrystalFamily now = ArmorSets.of(player);

@@ -19,7 +19,7 @@ import at.donmatzos.prismaticrealms.family.CrystalFamily;
  * Vision underwater, and no mining penalty off the ground (see PlayerDestroySpeedMixin).
  */
 public class DeepDiver implements SetBonus {
-	private static final int NIGHT_VISION_TICKS = 220;   // above vanilla's 200-tick flicker threshold
+	private static final int NIGHT_VISION_TICKS = 220;   // above vanilla's flicker threshold (<= 200); refreshed while <= NIGHT_VISION_TICKS - 10 so it never dims
 
 	@Override
 	public void addModifiers(BiConsumer<Holder<Attribute>, AttributeModifier> out) {
@@ -30,7 +30,7 @@ public class DeepDiver implements SetBonus {
 	public void tick(ServerPlayer wearer) {
 		MobEffectInstance current = wearer.getEffect(MobEffects.NIGHT_VISION);
 		if (wearer.isEyeInFluid(FluidTags.WATER)) {
-			if (current == null || (isOurs(current) && current.getDuration() < NIGHT_VISION_TICKS - 20)) {
+			if (current == null || (isOurs(current) && current.getDuration() <= NIGHT_VISION_TICKS - 10)) {
 				wearer.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, NIGHT_VISION_TICKS, 0, true, false, true));
 			}
 		} else if (current != null && isOurs(current)) {

@@ -26,7 +26,7 @@ public interface SetBonus {
 		return amount;
 	}
 
-	/** Attribute modifiers while the set is worn; use ArmorSetEffects.modifierId for ids. */
+	/** Attribute modifiers while the set is worn; use ArmorSetEffects.modifierId for ids. The ids must be stable between calls: they are used to remove the modifiers again. */
 	default void addModifiers(BiConsumer<Holder<Attribute>, AttributeModifier> out) {
 	}
 
