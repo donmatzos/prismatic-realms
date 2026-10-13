@@ -89,7 +89,7 @@ The altar also burns **3 shards of any family** as fuel for each artifact, from 
 
 A star pendant made from an Ice Star crystal, two Ice Star shards and **blue ice** as the catalyst. While you wear it:
 
-- Water under you freezes into frosted ice and lava into **Rimed Magma**, in a radius of 4 blocks, like Frost Walker II. Rimed Magma is a frozen crust you can walk on; it cracks and melts back into lava after a short while, and breaking it leaves lava.
+- Water under you freezes into frosted ice and lava into **Rimed Magma**, in a radius of 4 blocks, like Frost Walker II. Rimed Magma is a frozen crust you can walk on; it cracks and melts back into lava after a short while, and breaking it leaves lava. The crust under your feet keeps refreezing while you wear the Star, so you can stand still on it safely.
 - Magma blocks don't hurt you (campfires, fire and lava still do).
 - You don't freeze in powder snow.
 
