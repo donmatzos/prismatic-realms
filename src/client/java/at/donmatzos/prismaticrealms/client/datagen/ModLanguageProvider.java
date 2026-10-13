@@ -75,6 +75,8 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 		translations.add("item.prismaticrealms.sunblessed_talisman.bonus", "Sunblessed Talisman – Mined blocks drop smelted; immune to fire and lava.");
 		translations.add(ModItems.STORMFATHERS_HEIRLOOM, "Stormfather's Heirloom");
 		translations.add("item.prismaticrealms.stormfathers_heirloom.bonus", "Stormfather's Heirloom – 50% faster movement; walk up single blocks without jumping.");
+		translations.add(ModItems.ABYSSAL_HEART, "Abyssal Heart");
+		translations.add("item.prismaticrealms.abyssal_heart.bonus", "Abyssal Heart – Endless breath underwater; move and swim through water with ease.");
 		translations.add("item.prismaticrealms.artifact", "Artifact (wear it in an artifact slot)");
 		translations.add("container.prismaticrealms.artifacts", "Artifact bonuses");
 		translations.add("container.prismaticrealms.artifacts.none", "No artifacts equipped");

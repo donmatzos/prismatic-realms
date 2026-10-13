@@ -60,6 +60,7 @@ public final class ModCreativeTabs {
 				output.accept(ModItems.FROSTWALKER_STAR);
 				output.accept(ModItems.SUNBLESSED_TALISMAN);
 				output.accept(ModItems.STORMFATHERS_HEIRLOOM);
+				output.accept(ModItems.ABYSSAL_HEART);
 				for (ModBlocks.CrystalOre ore : ModBlocks.CRYSTAL_ORES) {
 					output.accept(ore.stone());
 					output.accept(ore.deepslate());

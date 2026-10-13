@@ -43,6 +43,8 @@
   "effect.prismaticrealms.radiance": "Radiance",
   "effect.prismaticrealms.tidecaller": "Tidecaller",
   "effect.prismaticrealms.venom_stack": "Venom Stack",
+  "item.prismaticrealms.abyssal_heart": "Abyssal Heart",
+  "item.prismaticrealms.abyssal_heart.bonus": "Abyssal Heart – Endless breath underwater; move and swim through water with ease.",
   "item.prismaticrealms.artifact": "Artifact (wear it in an artifact slot)",
   "item.prismaticrealms.blitz_slasher": "Blitz Slasher",
   "item.prismaticrealms.blitz_slasher.effect": "Blitz Rush – you move 50% faster for 3s",
