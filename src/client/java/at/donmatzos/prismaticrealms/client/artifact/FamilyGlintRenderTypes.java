@@ -15,10 +15,10 @@ import at.donmatzos.prismaticrealms.PrismaticRealms;
  * Vanilla's item glint render type (the item atlas with the glint scrolled over it) with a tinted glint texture
  * (`textures/misc/glint/<name>.png`, made by the local tools/textures/artifact_glint_gen.py), one per artifact family colour.
  */
-public final class ArtifactGlintRenderTypes {
+public final class FamilyGlintRenderTypes {
 	private static final Map<String, RenderType> CUTOUT = new HashMap<>();
 
-	private ArtifactGlintRenderTypes() {
+	private FamilyGlintRenderTypes() {
 	}
 
 	public static RenderType cutout(String glintName) {

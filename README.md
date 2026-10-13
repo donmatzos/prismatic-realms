@@ -68,7 +68,7 @@ Your inventory has an **artifact bar**: three slots on its left side (also on th
 
 Artifacts give passive bonuses, such as extra armour or speed, ongoing effects, or effects when you're hit, attack, mine or kill. Equipped artifacts drop when you die, like the rest of your inventory (`keepInventory` keeps them).
 
-Every artifact glows like an enchanted item, in the colour of its crystal family. Artifacts are crafted at the Spectral Altar, one for each of the seven colour families.
+Every artifact glows like an enchanted item, in the colour of its crystal family. Enchanted unique scythes glow in their family colour too, instead of the default purple. Artifacts are crafted at the Spectral Altar, one for each of the seven colour families.
 
 ### Spectral Altar
 

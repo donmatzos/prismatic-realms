@@ -11,27 +11,28 @@ import org.junit.jupiter.api.Test;
 
 class ArtifactGlintTest {
 	@Test
-	void everyArtifactHasItsOwnGlintTextureInTheJar() {
+	void everyFamilyItemHasAGlintTextureInTheJar() {
 		Set<String> seen = new HashSet<>();
-		for (String sprite : ArtifactGlint.spritePaths()) {
-			String name = ArtifactGlint.forSprite(sprite);
+		for (String sprite : FamilyGlint.spritePaths()) {
+			String name = FamilyGlint.forSprite(sprite);
 			assertNotNull(name);
 			assertNotNull(getClass().getResource("/assets/prismaticrealms/textures/misc/glint/" + name + ".png"), name);
 			seen.add(name);
 		}
-		assertEquals(7, seen.size());
+		assertEquals(7, seen.size());   // one glint per crystal family, shared by its artifact and unique scythe
 	}
 
 	@Test
-	void everyArtifactSpriteHasAnItemTexture() {
-		for (String sprite : ArtifactGlint.spritePaths()) {
+	void everyMappedSpriteHasAnItemTexture() {
+		for (String sprite : FamilyGlint.spritePaths()) {
 			assertNotNull(getClass().getResource("/assets/prismaticrealms/textures/" + sprite + ".png"), sprite);
 		}
 	}
 
 	@Test
 	void otherSpritesKeepTheVanillaGlint() {
-		assertNull(ArtifactGlint.forSprite("item/the_shallow_waters"));
-		assertNull(ArtifactGlint.forSprite("item/crimson_sanguis_crystal"));
+		assertNull(FamilyGlint.forSprite("item/netherite_scythe"));
+		assertNull(FamilyGlint.forSprite("item/netherite_scythe_in_hand"));
+		assertNull(FamilyGlint.forSprite("item/crimson_sanguis_crystal"));
 	}
 }
