@@ -1,5 +1,6 @@
 package at.donmatzos.prismaticrealms.artifact;
 
+import java.util.List;
 import java.util.function.BiConsumer;
 
 import net.minecraft.core.BlockPos;
@@ -11,7 +12,9 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.storage.loot.LootContext;
 
 import at.donmatzos.prismaticrealms.PrismaticRealms;
 
@@ -40,6 +43,10 @@ public abstract class ArtifactItem extends Item {
 	/** True cancels this damage before it's dealt (Fabric ALLOW_DAMAGE). */
 	public boolean preventsDamage(ServerPlayer wearer, DamageSource source) {
 		return false;
+	}
+
+	/** Changes the drops of a block the wearer broke, while the loot is generated (before anything lands). */
+	public void modifyBlockDrops(ServerPlayer wearer, LootContext context, List<ItemStack> drops) {
 	}
 
 	/** True makes the wearer immune to powder-snow freezing. Checked on both sides (the slots are synced to their owner). */

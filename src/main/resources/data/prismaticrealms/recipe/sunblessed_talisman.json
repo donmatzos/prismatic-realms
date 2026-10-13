@@ -1,0 +1,9 @@
+{
+	"type": "prismaticrealms:altar",
+	"crystal": "prismaticrealms:cruel_sun_crystal",
+	"shards": "prismaticrealms:cruel_sun_shard",
+	"catalyst": "minecraft:blaze_rod",
+	"result": {
+		"id": "prismaticrealms:sunblessed_talisman"
+	}
+}

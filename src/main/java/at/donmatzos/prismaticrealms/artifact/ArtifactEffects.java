@@ -9,6 +9,7 @@ import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -18,6 +19,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 
 import at.donmatzos.prismaticrealms.PrismaticRealms;
 
@@ -90,6 +92,12 @@ public final class ArtifactEffects {
 			}
 			if (source.getEntity() instanceof ServerPlayer attacker && attacker != entity) {
 				equipped(attacker).forEach(artifact -> artifact.onAttack(attacker, entity, source, damage));
+			}
+		});
+		// block loot only: its context carries the broken block's state, and THIS_ENTITY is whoever broke it
+		LootTableEvents.MODIFY_DROPS.register((table, context, drops) -> {
+			if (context.hasParameter(LootContextParams.BLOCK_STATE) && context.getOptional(LootContextParams.THIS_ENTITY) instanceof ServerPlayer wearer) {
+				equipped(wearer).forEach(artifact -> artifact.modifyBlockDrops(wearer, context, drops));
 			}
 		});
 		PlayerBlockBreakEvents.AFTER.register((level, player, pos, state, blockEntity) -> {
