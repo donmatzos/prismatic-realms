@@ -122,6 +122,13 @@ A gold goblet made from a Crimson Sanguis crystal, two Crimson Sanguis shards an
 - You have **4 extra hearts**.
 - **Blood Pact:** when you would die, the chalice breaks instead and heals you to full health, with the same animation as a Totem of Undying (showing the chalice, in red). The extra hearts go with it. It doesn't save you from the void or `/kill`, and a Totem of Undying in your hand is used first.
 
+### Verdant Aura (Overgrown Prosperity)
+
+An acorn pendant on a silver chain, made from an Overgrown Prosperity crystal, two Overgrown Prosperity shards and a **spore blossom** as the catalyst. While you wear it:
+
+- Crops, saplings, stems, nether wart, sweet berry bushes and cocoa within 5 blocks of you grow **much faster** (several times the normal speed, on top of bone meal and water).
+- Breaking a **log** drops **double** the logs. Leaves, crops and everything else drop as usual.
+
 ## Scythes
 
 Scythes are heavy, slow weapons: they hit harder than a sword of the same material, reach further, and sweep like swords. Sword enchantments work on them, except **Fire Aspect**: the unique scythes bring their own effects. In your hand they show a long reaper blade.

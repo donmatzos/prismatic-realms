@@ -1,0 +1,9 @@
+{
+	"type": "prismaticrealms:altar",
+	"crystal": "prismaticrealms:overgrown_prosperity_crystal",
+	"shards": "prismaticrealms:overgrown_prosperity_shard",
+	"catalyst": "minecraft:spore_blossom",
+	"result": {
+		"id": "prismaticrealms:verdant_aura"
+	}
+}
