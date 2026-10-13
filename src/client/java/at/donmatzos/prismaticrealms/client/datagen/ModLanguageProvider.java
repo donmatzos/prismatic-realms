@@ -69,8 +69,6 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 		translations.add("item.prismaticrealms.crystal_pouch.stored", "Stored: %1$s shards · %2$s crystals");
 		translations.add("item.prismaticrealms.crystal_pouch_upgrade.tooltip", "Smithing template for the Crystal Pouch");
 		translations.add("container.prismaticrealms.crystal_pouch.amount", "%1$s: %2$s / %3$s");
-		translations.add(ModItems.TEST_ARTIFACT, "Test Artifact");
-		translations.add("item.prismaticrealms.test_artifact.bonus", "Test Artifact – +1 armour");
 		translations.add(ModItems.FROSTWALKER_STAR, "Frostwalker Star");
 		translations.add("item.prismaticrealms.frostwalker_star.bonus", "Frostwalker Star – Freezes water and lava beneath you; immune to hot floors and freezing.");
 		translations.add(ModItems.SUNBLESSED_TALISMAN, "Sunblessed Talisman");

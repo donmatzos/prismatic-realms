@@ -59,7 +59,6 @@ public final class ModCreativeTabs {
 				output.accept(ModBlocks.SPECTRAL_ALTAR);
 				output.accept(ModItems.FROSTWALKER_STAR);
 				output.accept(ModItems.SUNBLESSED_TALISMAN);
-				output.accept(ModItems.TEST_ARTIFACT);
 				for (ModBlocks.CrystalOre ore : ModBlocks.CRYSTAL_ORES) {
 					output.accept(ore.stone());
 					output.accept(ore.deepslate());
