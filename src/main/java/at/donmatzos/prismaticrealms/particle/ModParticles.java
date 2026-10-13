@@ -30,6 +30,8 @@ public final class ModParticles {
 
 	/** Venom drop falling from a target (the Venom Stack effect); rendered by DripParticle, mostly violet, 30 % acid green. */
 	public static final SimpleParticleType VENOM_DRIP = Registry.register(BuiltInRegistries.PARTICLE_TYPE, PrismaticRealms.id("venom_drip"), FabricParticleTypes.simple());
+	/** Molten drop falling from a target (the Meltdown effect); rendered by DripParticle, molten orange, 30 % bright yellow. */
+	public static final SimpleParticleType MOLTEN_DRIP = Registry.register(BuiltInRegistries.PARTICLE_TYPE, PrismaticRealms.id("molten_drip"), FabricParticleTypes.simple());
 
 	private ModParticles() {
 	}
