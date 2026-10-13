@@ -19,6 +19,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 
 import at.donmatzos.prismaticrealms.PrismaticRealms;
 import at.donmatzos.prismaticrealms.armor.bonus.FrostbiteMantle;
+import at.donmatzos.prismaticrealms.armor.bonus.Photosynthesis;
 import at.donmatzos.prismaticrealms.armor.bonus.SetBonus;
 import at.donmatzos.prismaticrealms.armor.bonus.SolarMantle;
 import at.donmatzos.prismaticrealms.armor.bonus.StaticCharge;
@@ -89,6 +90,7 @@ public final class ArmorSetEffects {
 		register(CrystalFamily.CRUEL_SUN, new SolarMantle());
 		register(CrystalFamily.STORM_FANG, new StaticCharge());
 		register(CrystalFamily.ICE_STAR, new FrostbiteMantle());
+		register(CrystalFamily.OVERGROWN_PROSPERITY, new Photosynthesis());
 		ServerPlayConnectionEvents.JOIN.register((listener, sender, server) -> ACTIVE.remove(listener.player.getUUID()));
 		ServerPlayerEvents.AFTER_RESPAWN.register((oldPlayer, newPlayer, alive) -> ACTIVE.remove(newPlayer.getUUID()));
 		ServerPlayConnectionEvents.DISCONNECT.register((listener, server) -> {
