@@ -68,13 +68,30 @@ Your inventory has an **artifact bar**: three slots on its right side (also on t
 
 Artifacts give passive bonuses, such as extra armour or speed, ongoing effects, or effects when you're hit, attack, mine or kill. Equipped artifacts drop when you die, like the rest of your inventory (`keepInventory` keeps them).
 
-One artifact per crystal family is coming next.
+Artifacts are crafted at the Spectral Altar. More family artifacts are on the way.
 
 ### Spectral Altar
 
-The future artifact station, built like an enchanting table in the Spectral Binder's colours: dark lavender stone with a rainbow inlay and corner pillars, and a pale top with a rainbow ring. Above it floats a glowing Spectral Binder, circled by one shard of every family in rainbow order. They orbit faster when you come close. It gives off light like an enchanting table and can be mined with any pickaxe.
+The artifact station, built like an enchanting table in the Spectral Binder's colours: dark lavender stone with a rainbow inlay and corner pillars, and a pale top with a rainbow ring. Above it floats a glowing Spectral Binder, circled by one shard of every family in rainbow order. They orbit faster when you come close. It gives off light like an enchanting table and can be mined with any pickaxe.
 
-Craft it like an enchanting table, with a Spectral Binder in place of the book and two crystals (of any family) in place of the diamonds, over four obsidian. The recipe unlocks once you pick up a crystal. Crafting artifacts at the altar comes in a later update.
+Craft it like an enchanting table, with a Spectral Binder in place of the book and two crystals (of any family) in place of the diamonds, over four obsidian. The recipe unlocks once you pick up a crystal.
+
+**Crafting artifacts:** right-click the altar. Every artifact uses the same shape, a plus of five slots:
+
+- top: a crystal of the artifact's family
+- left and right: one shard of that family each
+- centre: a **Spectral Setting** (4 gold ingots around a Spectral Binder, at a crafting table)
+- bottom: the artifact's catalyst
+
+The altar also burns **3 shards of any family** as fuel for each artifact, from the fuel slot on the left. Without enough fuel the result is shown greyed out. Shift-clicking shards puts them into the fuel slot first. Anything left in the altar comes back to you when you close it.
+
+### Frostwalker Star (Ice Star)
+
+A star pendant made from an Ice Star crystal, two Ice Star shards and **blue ice** as the catalyst. While you wear it:
+
+- Water under you freezes into frosted ice and lava into **Rimed Magma**, in a radius of 4 blocks, like Frost Walker II. Rimed Magma is a frozen crust you can walk on; it cracks and melts back into lava after a short while, and breaking it leaves lava.
+- Magma blocks don't hurt you (campfires, fire and lava still do).
+- You don't freeze in powder snow.
 
 ## Scythes
 
