@@ -9,7 +9,8 @@
 		"InventoryMenuArtifactMixin",
 		"CreativeArtifactSlotMixin",
 		"LivingEntityFreezeArtifactMixin",
-		"LivingEntityDamageMixin"
+		"LivingEntityDamageMixin",
+		"PlayerDestroySpeedMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

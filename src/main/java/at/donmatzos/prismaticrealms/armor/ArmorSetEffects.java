@@ -18,6 +18,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 
 import at.donmatzos.prismaticrealms.PrismaticRealms;
+import at.donmatzos.prismaticrealms.armor.bonus.DeepDiver;
 import at.donmatzos.prismaticrealms.armor.bonus.FrostbiteMantle;
 import at.donmatzos.prismaticrealms.armor.bonus.Photosynthesis;
 import at.donmatzos.prismaticrealms.armor.bonus.SetBonus;
@@ -91,6 +92,7 @@ public final class ArmorSetEffects {
 		register(CrystalFamily.STORM_FANG, new StaticCharge());
 		register(CrystalFamily.ICE_STAR, new FrostbiteMantle());
 		register(CrystalFamily.OVERGROWN_PROSPERITY, new Photosynthesis());
+		register(CrystalFamily.CERULEAN_ABYSS, new DeepDiver());
 		ServerPlayConnectionEvents.JOIN.register((listener, sender, server) -> ACTIVE.remove(listener.player.getUUID()));
 		ServerPlayerEvents.AFTER_RESPAWN.register((oldPlayer, newPlayer, alive) -> ACTIVE.remove(newPlayer.getUUID()));
 		ServerPlayConnectionEvents.DISCONNECT.register((listener, server) -> {
