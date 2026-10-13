@@ -97,6 +97,14 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 		translations.add(ModItems.VIPERS_DIADEM, "Viper's Diadem");
 		translations.add("item.prismaticrealms.vipers_diadem.bonus", "Viper's Diadem – Hostile mobs within 6 blocks are poisoned (Venom Stack II); your fully charged hits add a Venom Stack. With the Scorpion Tail equipped, add +5 max stacks.");
 		translations.add("item.prismaticrealms.artifact", "Artifact (wear it in an artifact slot)");
+		translations.add("item.prismaticrealms.armor_set", "Set bonus (full set, or helmet, leggings, boots and an elytra):");
+		translations.add("armor_set.prismaticrealms.ice_star", "Frostbite Mantle – melee attackers are frozen for 2s; with the Scythe of the Frozen Expanse, charged hits root the target for 5s");
+		translations.add("armor_set.prismaticrealms.cruel_sun", "Solar Mantle – melee attackers burn for 4s; your hits on burning targets deal 20% more");
+		translations.add("armor_set.prismaticrealms.storm_fang", "Static Charge – after 3s of sprinting, your next hit deals +6 damage");
+		translations.add("armor_set.prismaticrealms.overgrown_prosperity", "Photosynthesis – in daylight under open sky you heal slowly and never lose hunger");
+		translations.add("armor_set.prismaticrealms.cerulean_abyss", "Deep Diver – full mining speed underwater and while floating; Night Vision underwater");
+		translations.add("armor_set.prismaticrealms.crimson_sanguis", "Sanguine Vessel – +6 hearts; the Bloodstone Chalice has a 50% chance not to break");
+		translations.add("armor_set.prismaticrealms.venom_crown", "Toxic Coat – immune to Poison; melee attackers get a Venom Stack; +2 max Venom Stacks");
 		translations.add("container.prismaticrealms.artifacts", "Artifact bonuses");
 		translations.add("container.prismaticrealms.artifacts.toggle", "Artifacts");
 		translations.add("container.prismaticrealms.artifacts.none", "No artifacts equipped");
