@@ -21,6 +21,7 @@ import at.donmatzos.prismaticrealms.PrismaticRealms;
 import at.donmatzos.prismaticrealms.armor.bonus.DeepDiver;
 import at.donmatzos.prismaticrealms.armor.bonus.FrostbiteMantle;
 import at.donmatzos.prismaticrealms.armor.bonus.Photosynthesis;
+import at.donmatzos.prismaticrealms.armor.bonus.SanguineVessel;
 import at.donmatzos.prismaticrealms.armor.bonus.SetBonus;
 import at.donmatzos.prismaticrealms.armor.bonus.SolarMantle;
 import at.donmatzos.prismaticrealms.armor.bonus.StaticCharge;
@@ -93,6 +94,7 @@ public final class ArmorSetEffects {
 		register(CrystalFamily.ICE_STAR, new FrostbiteMantle());
 		register(CrystalFamily.OVERGROWN_PROSPERITY, new Photosynthesis());
 		register(CrystalFamily.CERULEAN_ABYSS, new DeepDiver());
+		register(CrystalFamily.CRIMSON_SANGUIS, new SanguineVessel());
 		ServerPlayConnectionEvents.JOIN.register((listener, sender, server) -> ACTIVE.remove(listener.player.getUUID()));
 		ServerPlayerEvents.AFTER_RESPAWN.register((oldPlayer, newPlayer, alive) -> ACTIVE.remove(newPlayer.getUUID()));
 		ServerPlayConnectionEvents.DISCONNECT.register((listener, server) -> {
