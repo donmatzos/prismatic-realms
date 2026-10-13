@@ -17,6 +17,8 @@
   "container.prismaticrealms.artifacts": "Artifact bonuses",
   "container.prismaticrealms.artifacts.none": "No artifacts equipped",
   "container.prismaticrealms.crystal_pouch.amount": "%1$s: %2$s / %3$s",
+  "container.prismaticrealms.spectral_altar": "Spectral Altar",
+  "container.prismaticrealms.spectral_altar.needs_fuel": "Needs 3 shards of fuel",
   "dowsing.prismaticrealms.coords": " (x %1$s, y %2$s, z %3$s)",
   "dowsing.prismaticrealms.direction.east": "east",
   "dowsing.prismaticrealms.direction.north": "north",

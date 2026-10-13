@@ -74,6 +74,8 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 		translations.add("item.prismaticrealms.artifact", "Artifact (wear it in an artifact slot)");
 		translations.add("container.prismaticrealms.artifacts", "Artifact bonuses");
 		translations.add("container.prismaticrealms.artifacts.none", "No artifacts equipped");
+		translations.add("container.prismaticrealms.spectral_altar", "Spectral Altar");
+		translations.add("container.prismaticrealms.spectral_altar.needs_fuel", "Needs 3 shards of fuel");
 		translations.add("dowsing.prismaticrealms.found", "%1$s: %2$s blocks · %3$s · %4$s");
 		translations.add("dowsing.prismaticrealms.coords", " (x %1$s, y %2$s, z %3$s)");
 		translations.add("dowsing.prismaticrealms.none", "No %1$s within %2$s blocks");
