@@ -107,9 +107,17 @@ An old storm pendant made from a Storm Fang crystal, two Storm Fang shards and a
 - You move **50 % faster**, all the time. The bonus adds up with the Blitz Slasher's Blitz Rush instead of multiplying: both together make you twice as fast, and sprinting comes on top as usual.
 - **Storm step:** you walk up single blocks without jumping, like a horse.
 
+### Abyssal Heart (Cerulean Abyss)
+
+A deep-blue heart pendant made from a Cerulean Abyss crystal, two Cerulean Abyss shards and a **nautilus shell** as the catalyst. While you wear it:
+
+- You never run out of air underwater.
+- You walk through water as fast as on land, like Depth Strider III.
+- You swim fast: Dolphin's Grace while you're in water (it fades shortly after you leave it, and never cuts a Dolphin's Grace potion short).
+
 ## Scythes
 
-Scythes are heavy, slow weapons: they hit harder than a sword of the same material, reach further, and sweep like swords. Sword enchantments work on them. In your hand they show a long reaper blade.
+Scythes are heavy, slow weapons: they hit harder than a sword of the same material, reach further, and sweep like swords. Sword enchantments work on them, except **Fire Aspect**: the unique scythes bring their own effects. In your hand they show a long reaper blade.
 
 - **Material scythes:** wood, stone, copper, gold, iron and diamond. Craft them from 2 of the material, a Spectral Binder and 2 sticks. The netherite scythe is a smithing upgrade from the diamond one, like other netherite gear.
 - **Harvesting:** right-click a fully grown crop with any scythe to harvest it with **double the drops**. It is replanted automatically, and fully grown crops directly next to it (north, south, east and west) are harvested too. Each click costs one durability. Works on wheat, carrots, potatoes, beetroots and nether wart.
@@ -121,11 +129,11 @@ Each crystal family has its own unique scythe with netherite strength. It is cra
 | Scythe | Family | Charged-hit effect |
 |---|---|---|
 | Crimson Diabell | Crimson Sanguis | **Bleed:** the target loses health every second for 5 s, twice as much while it keeps moving. |
-| Melting Sunray | Cruel Sun | **Radiance:** you gain Fire Resistance for 6 s, and anything that hurts you catches fire. |
+| Melting Sunray | Cruel Sun | **Meltdown:** melts the target's armor: −50 % armor for 6 s, dripping molten metal. |
 | Blitz Slasher | Storm Fang | **Blitz Rush:** you move 50 % faster for 3 s (adds up with Stormfather's Heirloom). |
 | Overgrown Reaper | Overgrown Prosperity | **Leech Seed:** drains the target's health for 5 s and heals you by the same amount. |
 | Scythe of the Frozen Expanse | Ice Star | **Freeze:** slows the target to a quarter of its speed for 3 s. |
-| The Shallow Waters | Cerulean Abyss | **Tidecaller:** Dolphin's Grace and Water Breathing for 8 s; while you're in water, every hit heals you. |
+| The Shallow Waters | Cerulean Abyss | **Tidecaller:** for 8 s every hit heals you 1 health, or 2 while you're in water or rain. |
 | Scorpion Tail | Venom Crown | **Venom Stack:** poisons the target for 6 s. Each further charged hit adds a stack (up to 5), and more stacks deal more damage. |
 
 Each effect has its own particles and status icon, and the scythe's tooltip describes it.
