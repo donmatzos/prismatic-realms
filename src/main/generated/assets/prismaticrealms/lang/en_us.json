@@ -105,7 +105,7 @@
   "item.prismaticrealms.verdant_aura": "Verdant Aura",
   "item.prismaticrealms.verdant_aura.bonus": "Verdant Aura – Plants within 5 blocks grow much faster; broken logs drop double.",
   "item.prismaticrealms.vipers_diadem": "Viper's Diadem",
-  "item.prismaticrealms.vipers_diadem.bonus": "Viper's Diadem – Hostile mobs within 6 blocks are poisoned (Venom Stack II); your fully charged hits add a Venom Stack. With the Scorpion Tail in hand, stacks go up to 10.",
+  "item.prismaticrealms.vipers_diadem.bonus": "Viper's Diadem – Hostile mobs within 6 blocks are poisoned (Venom Stack II); your fully charged hits add a Venom Stack. With the Scorpion Tail equipped, add +5 max stacks.",
   "item.prismaticrealms.wooden_scythe": "Wooden Scythe",
   "itemGroup.prismaticrealms.prismatic_realms": "Prismatic Realms"
 }

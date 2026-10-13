@@ -82,7 +82,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 		translations.add(ModItems.VERDANT_AURA, "Verdant Aura");
 		translations.add("item.prismaticrealms.verdant_aura.bonus", "Verdant Aura – Plants within 5 blocks grow much faster; broken logs drop double.");
 		translations.add(ModItems.VIPERS_DIADEM, "Viper's Diadem");
-		translations.add("item.prismaticrealms.vipers_diadem.bonus", "Viper's Diadem – Hostile mobs within 6 blocks are poisoned (Venom Stack II); your fully charged hits add a Venom Stack. With the Scorpion Tail in hand, stacks go up to 10.");
+		translations.add("item.prismaticrealms.vipers_diadem.bonus", "Viper's Diadem – Hostile mobs within 6 blocks are poisoned (Venom Stack II); your fully charged hits add a Venom Stack. With the Scorpion Tail equipped, add +5 max stacks.");
 		translations.add("item.prismaticrealms.artifact", "Artifact (wear it in an artifact slot)");
 		translations.add("container.prismaticrealms.artifacts", "Artifact bonuses");
 		translations.add("container.prismaticrealms.artifacts.none", "No artifacts equipped");
