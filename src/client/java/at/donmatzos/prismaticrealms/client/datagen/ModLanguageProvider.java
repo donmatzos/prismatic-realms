@@ -85,6 +85,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 		translations.add("item.prismaticrealms.vipers_diadem.bonus", "Viper's Diadem – Hostile mobs within 6 blocks are poisoned (Venom Stack II); your fully charged hits add a Venom Stack. With the Scorpion Tail equipped, add +5 max stacks.");
 		translations.add("item.prismaticrealms.artifact", "Artifact (wear it in an artifact slot)");
 		translations.add("container.prismaticrealms.artifacts", "Artifact bonuses");
+		translations.add("container.prismaticrealms.artifacts.toggle", "Artifacts");
 		translations.add("container.prismaticrealms.artifacts.none", "No artifacts equipped");
 		translations.add("container.prismaticrealms.spectral_altar", "Spectral Altar");
 		translations.add("container.prismaticrealms.spectral_altar.needs_fuel", "Needs 3 shards of fuel");

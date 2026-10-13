@@ -17,39 +17,32 @@ class ArtifactBarLayoutTest {
 	}
 
 	@Test
-	void panelIsAttachedToTheRightEdge() {
-		// the panel overlaps the window's right border (imageWidth 176) so it looks attached
-		assertTrue(S.panelX() < 176 && S.panelX() + ArtifactBarLayout.PANEL_WIDTH > 176);
-		assertTrue(S.slotX() >= 176);
+	void panelIsAttachedToTheLeftEdge() {
+		// the panel overlaps the window's left border so it looks attached
+		assertTrue(S.panelX() < 0 && S.panelX() + ArtifactBarLayout.PANEL_WIDTH > 0);
+		assertTrue(S.slotX() < 0 && S.slotX() + 16 <= 0);
 	}
 
 	@Test
 	void containsUsesWindowCoordinates() {
 		int left = 100, top = 50;
-		assertTrue(ArtifactBarLayout.contains(S, left + 180, top + 30, left, top));
-		assertFalse(ArtifactBarLayout.contains(S, left + 180, top + 70, left, top));   // below the panel
-		assertFalse(ArtifactBarLayout.contains(S, left + 150, top + 30, left, top));   // inside the inventory, left of the panel
-		assertFalse(ArtifactBarLayout.contains(S, left + 210, top + 30, left, top));   // right of the panel
+		assertTrue(ArtifactBarLayout.contains(S, left - 10, top + 30, left, top));
+		assertFalse(ArtifactBarLayout.contains(S, left - 10, top + 70, left, top));   // below the panel
+		assertFalse(ArtifactBarLayout.contains(S, left + 20, top + 30, left, top));    // inside the inventory, right of the panel
+		assertFalse(ArtifactBarLayout.contains(S, left - 40, top + 30, left, top));    // left of the panel
 	}
 
 	@Test
 	void overSlotOnlyOnTheSlotAreas() {
 		int left = 0, top = 0;
-		assertTrue(ArtifactBarLayout.overSlot(S, 180, 30, left, top));    // second slot
-		assertFalse(ArtifactBarLayout.overSlot(S, 180, 43, left, top));   // gap between slots 2 and 3
-		assertFalse(ArtifactBarLayout.overSlot(S, 175, 10, left, top));   // frame, left of the slots
+		assertTrue(ArtifactBarLayout.overSlot(S, -10, 30, left, top));    // second slot
+		assertFalse(ArtifactBarLayout.overSlot(S, -10, 43, left, top));   // gap between slots 2 and 3
+		assertFalse(ArtifactBarLayout.overSlot(S, -22, 10, left, top));   // frame, left of the slots
 	}
 
 	@Test
-	void creativeLayoutIsRightOfTheCreativeWindow() {
-		assertTrue(ArtifactBarLayout.CREATIVE.slotX() >= 195);
-		assertTrue(ArtifactBarLayout.CREATIVE.panelX() < 195);
-	}
-
-	@Test
-	void overhangPastTheWindowsRightEdge() {
-		// the effect list (drawn right of the window) has to move this far to clear the bar
-		assertEquals(25, ArtifactBarLayout.rightOverhang(ArtifactBarLayout.SURVIVAL, 176));
-		assertEquals(25, ArtifactBarLayout.rightOverhang(ArtifactBarLayout.CREATIVE, 195));
+	void creativeLayoutIsLeftOfTheCreativeWindow() {
+		assertTrue(ArtifactBarLayout.CREATIVE.slotX() < 0);
+		assertTrue(ArtifactBarLayout.CREATIVE.panelX() < 0);
 	}
 }

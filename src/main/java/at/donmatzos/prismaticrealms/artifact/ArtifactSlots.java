@@ -9,6 +9,7 @@ import net.fabricmc.fabric.api.attachment.v1.AttachmentRegistry;
 import net.fabricmc.fabric.api.attachment.v1.AttachmentSyncPredicate;
 import net.fabricmc.fabric.api.attachment.v1.AttachmentType;
 
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
@@ -51,6 +52,11 @@ public record ArtifactSlots(List<ItemStack> stacks) {
 
 	public static void set(Player player, ArtifactSlots slots) {
 		player.setAttached(TYPE, slots);
+	}
+
+	/** The item id per slot, "" for an empty one (the form ArtifactRules works with). */
+	public List<String> ids() {
+		return this.stacks.stream().map(stack -> stack.isEmpty() ? "" : BuiltInRegistries.ITEM.getKey(stack.getItem()).toString()).toList();
 	}
 
 	public ItemStack get(int slot) {

@@ -64,7 +64,7 @@ A pouch that keeps your shards and crystals out of the way. Craft it from a bund
 
 ## Artifacts
 
-Your inventory has an **artifact bar**: three slots on its right side (also on the creative inventory tab). An artifact only works while it sits in one of them, and each artifact can be worn once at a time. Shift-click an artifact to put it on or take it off, and hover the bar's frame to see all your artifact bonuses.
+Your inventory has an **artifact bar**: three slots on its left side (also on the creative inventory tab). The button next to the recipe book button opens and closes it, and it remembers your choice; it takes the recipe book's place, so opening one closes the other. Closing the bar only hides it, so your artifacts keep working. An artifact only works while it sits in one of them, and each artifact can be worn once at a time. Shift-click an artifact to put it on or take it off, or just hold it in your main hand and right-click to put it on (if a slot is free and you aren't already wearing it), and hover the bar's frame to see all your artifact bonuses.
 
 Artifacts give passive bonuses, such as extra armour or speed, ongoing effects, or effects when you're hit, attack, mine or kill. Equipped artifacts drop when you die, like the rest of your inventory (`keepInventory` keeps them).
 

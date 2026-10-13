@@ -34,6 +34,12 @@ public class ArtifactSlot extends Slot {
 				BuiltInRegistries.ITEM.getKey(stack.getItem()).toString(), stack.getItem() instanceof ArtifactItem);
 	}
 
+	/** Hidden while the artifact bar is closed (client toggle), so there are no invisible click targets. */
+	@Override
+	public boolean isActive() {
+		return ArtifactBarState.isOpen();
+	}
+
 	@Override
 	public int getMaxStackSize() {
 		return 1;
