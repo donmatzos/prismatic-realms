@@ -10,6 +10,7 @@ import at.donmatzos.prismaticrealms.block.ModBlockEntities;
 import at.donmatzos.prismaticrealms.block.ModBlocks;
 import at.donmatzos.prismaticrealms.effect.ModEffects;
 import at.donmatzos.prismaticrealms.item.ChargedHitScytheItem;
+import at.donmatzos.prismaticrealms.item.ScytheEnchantments;
 import at.donmatzos.prismaticrealms.item.ScytheHarvest;
 import at.donmatzos.prismaticrealms.particle.ModParticles;
 import at.donmatzos.prismaticrealms.item.ModCreativeTabs;
@@ -48,6 +49,7 @@ public class PrismaticRealms implements ModInitializer {
 		SelectPouchEntryPayload.initialize();
 		ChargedHitScytheItem.initialize();
 		ScytheHarvest.initialize();
+		ScytheEnchantments.initialize();
 		ModBlocks.initialize();
 		ModBlockEntities.initialize();
 		ModCreativeTabs.initialize();
