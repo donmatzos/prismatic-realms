@@ -66,7 +66,7 @@ public final class ModItems {
 	public static final Item BLITZ_SLASHER = register("blitz_slasher", BlitzSlasherItem::new, scytheProperties(ToolMaterial.NETHERITE).repairable(STORM_FANG_CRYSTAL));
 	// Netherite scythe stats, repaired with Cerulean Abyss Crystals, plus Tidecaller for the wielder on fully charged hits (ShallowWatersItem).
 	public static final Item THE_SHALLOW_WATERS = register("the_shallow_waters", ShallowWatersItem::new, scytheProperties(ToolMaterial.NETHERITE).repairable(CERULEAN_ABYSS_CRYSTAL));
-	// Netherite scythe stats, repaired with Cruel Sun Crystals, plus Radiance for the wielder on fully charged hits (MeltingSunrayItem).
+	// Netherite scythe stats, repaired with Cruel Sun Crystals, plus Meltdown (target armor -50 %) on fully charged hits (MeltingSunrayItem).
 	public static final Item MELTING_SUNRAY = register("melting_sunray", MeltingSunrayItem::new, scytheProperties(ToolMaterial.NETHERITE).repairable(CRUEL_SUN_CRYSTAL));
 	// Netherite scythe stats, repaired with Venom Crown Crystals, plus Venom Stack on fully charged hits (ScorpionTailItem).
 	public static final Item SCORPION_TAIL = register("scorpion_tail", ScorpionTailItem::new, scytheProperties(ToolMaterial.NETHERITE).repairable(VENOM_CROWN_CRYSTAL));
