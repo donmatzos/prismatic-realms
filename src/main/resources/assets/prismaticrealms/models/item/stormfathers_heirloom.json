@@ -1,6 +1,6 @@
 {
 	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "prismaticrealms:item/test_artifact"
+		"layer0": "prismaticrealms:item/stormfathers_heirloom"
 	}
 }

@@ -93,6 +93,20 @@ A star pendant made from an Ice Star crystal, two Ice Star shards and **blue ice
 - Magma blocks don't hurt you (campfires, fire and lava still do).
 - You don't freeze in powder snow.
 
+### Sunblessed Talisman (Cruel Sun)
+
+A molten sun talisman made from a Cruel Sun crystal, two Cruel Sun shards and a **blaze rod** as the catalyst. While you wear it:
+
+- Blocks you mine drop **smelted**: whatever a furnace would make of each drop (raw iron → iron ingot, ancient debris → netherite scrap, sand → glass, logs → charcoal, cobblestone → stone, …). Fortune still multiplies the drops, and you get the furnace's experience on the spot. Mining with **Silk Touch** turns it off, so you can still collect ore blocks.
+- You're **immune to fire**: fire, burning, lava, magma blocks, campfires and fireballs don't hurt you, and flames go out right away. Lava still slows you down.
+
+### Stormfather's Heirloom (Storm Fang)
+
+An old storm pendant made from a Storm Fang crystal, two Storm Fang shards and a **breeze rod** as the catalyst. While you wear it:
+
+- You move **50 % faster**, all the time. The bonus adds up with the Blitz Slasher's Blitz Rush instead of multiplying: both together make you twice as fast, and sprinting comes on top as usual.
+- **Storm step:** you walk up single blocks without jumping, like a horse.
+
 ## Scythes
 
 Scythes are heavy, slow weapons: they hit harder than a sword of the same material, reach further, and sweep like swords. Sword enchantments work on them. In your hand they show a long reaper blade.
@@ -108,7 +122,7 @@ Each crystal family has its own unique scythe with netherite strength. It is cra
 |---|---|---|
 | Crimson Diabell | Crimson Sanguis | **Bleed:** the target loses health every second for 5 s, twice as much while it keeps moving. |
 | Melting Sunray | Cruel Sun | **Radiance:** you gain Fire Resistance for 6 s, and anything that hurts you catches fire. |
-| Blitz Slasher | Storm Fang | **Blitz Rush:** you move 50 % faster for 3 s. |
+| Blitz Slasher | Storm Fang | **Blitz Rush:** you move 50 % faster for 3 s (adds up with Stormfather's Heirloom). |
 | Overgrown Reaper | Overgrown Prosperity | **Leech Seed:** drains the target's health for 5 s and heals you by the same amount. |
 | Scythe of the Frozen Expanse | Ice Star | **Freeze:** slows the target to a quarter of its speed for 3 s. |
 | The Shallow Waters | Cerulean Abyss | **Tidecaller:** Dolphin's Grace and Water Breathing for 8 s; while you're in water, every hit heals you. |
