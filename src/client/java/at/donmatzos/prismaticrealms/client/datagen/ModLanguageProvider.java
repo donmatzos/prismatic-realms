@@ -59,6 +59,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 		translations.add(ModItems.NETHERITE_SCYTHE, "Netherite Scythe");
 		translations.add(ModItems.SCYTHE_OF_THE_FROZEN_EXPANSE, "Scythe of the Frozen Expanse");
 		translations.add(ModEffects.FREEZE.value(), "Freeze");
+		translations.add(ModEffects.FROZEN_SOLID.value(), "Frozen Solid");
 		translations.add(ModItems.OVERGROWN_REAPER, "Overgrown Reaper");
 		translations.add(ModEffects.LEECH_SEED.value(), "Leech Seed");
 		translations.add(ModItems.CRIMSON_DIABELL, "Crimson Diabell");
