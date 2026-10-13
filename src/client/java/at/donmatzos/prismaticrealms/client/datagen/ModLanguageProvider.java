@@ -1,14 +1,19 @@
 package at.donmatzos.prismaticrealms.client.datagen;
 
+import java.util.Arrays;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
 import net.minecraft.core.HolderLookup;
+import net.minecraft.world.item.equipment.ArmorType;
 
 import at.donmatzos.prismaticrealms.block.ModBlocks;
 import at.donmatzos.prismaticrealms.effect.ModEffects;
+import at.donmatzos.prismaticrealms.family.CrystalFamily;
+import at.donmatzos.prismaticrealms.item.FamilyArmor;
 import at.donmatzos.prismaticrealms.item.ModCreativeTabs;
 import at.donmatzos.prismaticrealms.item.ModItems;
 
@@ -36,6 +41,13 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 		translations.add(ModItems.CERULEAN_ABYSS_CRYSTAL, "Cerulean Abyss Crystal");
 		translations.add(ModItems.VENOM_CROWN_SHARD, "Venom Crown Shard");
 		translations.add(ModItems.VENOM_CROWN_CRYSTAL, "Venom Crown Crystal");
+		for (CrystalFamily family : CrystalFamily.values()) {
+			String name = Arrays.stream(family.id().split("_")).map(w -> Character.toUpperCase(w.charAt(0)) + w.substring(1)).collect(Collectors.joining(" "));
+			for (ArmorType type : FamilyArmor.TYPES) {
+				String piece = FamilyArmor.pieceName(type);
+				translations.add(FamilyArmor.piece(family, type), name + " " + Character.toUpperCase(piece.charAt(0)) + piece.substring(1));
+			}
+		}
 		translations.add(ModItems.SPECTRAL_BINDER, "Spectral Binder");
 		translations.add(ModItems.SPECTRAL_SETTING, "Spectral Setting");
 		translations.add(ModItems.WOODEN_SCYTHE, "Wooden Scythe");

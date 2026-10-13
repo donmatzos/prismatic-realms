@@ -1,0 +1,14 @@
+{
+	"layers": {
+		"humanoid": [
+			{
+				"texture": "prismaticrealms:cerulean_abyss"
+			}
+		],
+		"humanoid_leggings": [
+			{
+				"texture": "prismaticrealms:cerulean_abyss"
+			}
+		]
+	}
+}

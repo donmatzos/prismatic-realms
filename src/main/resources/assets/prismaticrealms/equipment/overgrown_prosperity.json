@@ -1,0 +1,14 @@
+{
+	"layers": {
+		"humanoid": [
+			{
+				"texture": "prismaticrealms:overgrown_prosperity"
+			}
+		],
+		"humanoid_leggings": [
+			{
+				"texture": "prismaticrealms:overgrown_prosperity"
+			}
+		]
+	}
+}

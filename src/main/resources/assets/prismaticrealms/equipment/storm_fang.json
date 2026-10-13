@@ -1,0 +1,14 @@
+{
+	"layers": {
+		"humanoid": [
+			{
+				"texture": "prismaticrealms:storm_fang"
+			}
+		],
+		"humanoid_leggings": [
+			{
+				"texture": "prismaticrealms:storm_fang"
+			}
+		]
+	}
+}

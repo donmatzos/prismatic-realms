@@ -1,0 +1,14 @@
+{
+	"layers": {
+		"humanoid": [
+			{
+				"texture": "prismaticrealms:ice_star"
+			}
+		],
+		"humanoid_leggings": [
+			{
+				"texture": "prismaticrealms:ice_star"
+			}
+		]
+	}
+}

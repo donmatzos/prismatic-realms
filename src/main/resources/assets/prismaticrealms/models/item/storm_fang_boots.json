@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "prismaticrealms:item/storm_fang_boots"
+	}
+}
