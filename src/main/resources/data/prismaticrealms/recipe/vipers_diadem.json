@@ -1,0 +1,9 @@
+{
+	"type": "prismaticrealms:altar",
+	"crystal": "prismaticrealms:venom_crown_crystal",
+	"shards": "prismaticrealms:venom_crown_shard",
+	"catalyst": "minecraft:fermented_spider_eye",
+	"result": {
+		"id": "prismaticrealms:vipers_diadem"
+	}
+}
