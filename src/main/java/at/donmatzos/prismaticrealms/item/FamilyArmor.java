@@ -1,6 +1,7 @@
 package at.donmatzos.prismaticrealms.item;
 
 import java.util.EnumMap;
+import java.util.HashMap;
 import java.util.Map;
 
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -10,6 +11,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.TagKey;
 
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.item.equipment.EquipmentAsset;
@@ -29,6 +31,8 @@ public final class FamilyArmor {
 
 	private static final Map<CrystalFamily, Map<ArmorType, Item>> PIECES = new EnumMap<>(CrystalFamily.class);
 
+	private static final Map<Item, CrystalFamily> FAMILY_OF = new HashMap<>();
+
 	static {
 		for (CrystalFamily family : CrystalFamily.values()) {
 			ArmorMaterial material = new ArmorMaterial(
@@ -42,8 +46,10 @@ public final class FamilyArmor {
 					ResourceKey.create(EquipmentAssets.ROOT_ID, PrismaticRealms.id(family.id())));
 			Map<ArmorType, Item> pieces = new EnumMap<>(ArmorType.class);
 			for (ArmorType type : TYPES) {
-				pieces.put(type, ModItems.register(family.id() + "_" + pieceName(type), Item::new,
-						new Item.Properties().humanoidArmor(material, type).durability(type.getDurability(BASE_DURABILITY))));
+				Item item = ModItems.register(family.id() + "_" + pieceName(type), Item::new,
+						new Item.Properties().humanoidArmor(material, type).durability(type.getDurability(BASE_DURABILITY)));
+				pieces.put(type, item);
+				FAMILY_OF.put(item, family);
 			}
 			PIECES.put(family, pieces);
 		}
@@ -54,6 +60,11 @@ public final class FamilyArmor {
 
 	public static Item piece(CrystalFamily family, ArmorType type) {
 		return PIECES.get(family).get(type);
+	}
+
+	/** The family a family armor piece belongs to, or null for any other item. */
+	public static CrystalFamily familyOf(ItemStack stack) {
+		return FAMILY_OF.get(stack.getItem());
 	}
 
 	public static String pieceName(ArmorType type) {

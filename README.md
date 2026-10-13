@@ -164,6 +164,20 @@ Each effect has its own particles and status icon, and the scythe's tooltip desc
 
 Each colour family has a full armor set (helmet, chestplate, leggings, boots) with the protection of netherite armor, recoloured and decorated in the family's colours. Repair it with the family's crystal. For now the sets are only available in the creative inventory; crafting is still to come.
 
+### Set bonuses
+
+Wearing a full set, or the helmet, leggings and boots together with an elytra, activates the family's set bonus.
+
+| Family | Bonus |
+|---|---|
+| Ice Star | **Frostbite Mantle:** melee attackers are frozen for 2 s. With the Scythe of the Frozen Expanse, charged hits root the target for 5 s. |
+| Cruel Sun | **Solar Mantle:** melee attackers burn for 4 s; your hits on burning targets deal 20 % more. |
+| Storm Fang | **Static Charge:** after 3 s of sprinting, your next hit deals +6 damage. |
+| Overgrown Prosperity | **Photosynthesis:** in daylight under open sky you heal slowly and never lose hunger. |
+| Cerulean Abyss | **Deep Diver:** full mining speed underwater and while floating; Night Vision underwater. |
+| Crimson Sanguis | **Sanguine Vessel:** +6 hearts; the Bloodstone Chalice has a 50 % chance not to break. |
+| Venom Crown | **Toxic Coat:** immune to Poison; melee attackers get a Venom Stack; +2 max Venom Stacks. |
+
 ## Planned
 
 - The **Light** and **Dark** endgame families.

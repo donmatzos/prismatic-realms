@@ -16,6 +16,12 @@ public final class ModEffects {
 			new FreezeEffect(MobEffectCategory.HARMFUL, 0xBEEBFF)
 					.addAttributeModifier(Attributes.MOVEMENT_SPEED, PrismaticRealms.id("effect.freeze"), -0.75, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
 
+	/** Rooted: movement speed and jump strength to 0 (-100 %). Applied for 5 s by the Scythe of the Frozen Expanse's charged hits while its wielder wears the Ice Star set. */
+	public static final Holder<MobEffect> FROZEN_SOLID = Registry.registerForHolder(BuiltInRegistries.MOB_EFFECT, PrismaticRealms.id("frozen_solid"),
+			new FreezeEffect(MobEffectCategory.HARMFUL, 0x9FD8F0)
+					.addAttributeModifier(Attributes.MOVEMENT_SPEED, PrismaticRealms.id("effect.frozen_solid.speed"), -1.0, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+					.addAttributeModifier(Attributes.JUMP_STRENGTH, PrismaticRealms.id("effect.frozen_solid.jump"), -1.0, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+
 	/** Drains 1 health per second for 5 seconds and heals whoever planted it (Overgrown Reaper, fully charged hits). */
 	public static final Holder<MobEffect> LEECH_SEED = Registry.registerForHolder(BuiltInRegistries.MOB_EFFECT, PrismaticRealms.id("leech_seed"),
 			new LeechSeedEffect(MobEffectCategory.HARMFUL, 0x6BBF3A));

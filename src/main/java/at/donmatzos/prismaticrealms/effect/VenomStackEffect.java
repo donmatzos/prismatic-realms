@@ -8,20 +8,25 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 
+import at.donmatzos.prismaticrealms.armor.ArmorSets;
 import at.donmatzos.prismaticrealms.artifact.VipersDiademItem;
+import at.donmatzos.prismaticrealms.family.CrystalFamily;
 import at.donmatzos.prismaticrealms.particle.ModParticles;
 
 /**
  * Venom Stack: the amplifier is the number of stacks minus one. Once a second the target loses {@link #DAMAGE_PER_STACK}
- * health per stack, and violet and acid-green venom drips from it, more with more stacks. Every fully charged Scorpion Tail hit adds a
- * stack (up to {@link #MAX_STACKS}) and resets the duration; when it runs out, all stacks go at once. A kill by the venom
- * counts for whoever applied it.
+ * health per stack, and violet and acid-green venom drips from it, more with more stacks. Every fully charged Scorpion Tail
+ * hit adds a stack (up to {@link #MAX_STACKS}; the Venom Crown armor set raises each causer's maximum by 2, see
+ * {@link #maxStacksFor}) and resets the duration; when it runs out, all stacks go at once. A kill by the venom counts for
+ * whoever applied it.
  */
 public class VenomStackEffect extends MobEffect {
 	public static final int DURATION_TICKS = 6 * 20;
 	public static final int MAX_STACKS = 5;
 	/** The maximum for a wielder of the Scorpion Tail wearing the Viper's Diadem. */
 	public static final int MAX_STACKS_BOOSTED = 10;
+	/** Toxic Coat: the Venom Crown armor set raises the maximum by 2. */
+	private static final int SET_BONUS_STACKS = 2;
 	private static final int REFRESH_BELOW_TICKS = 40;
 	private static final int INTERVAL_TICKS = 20;
 	private static final float DAMAGE_PER_STACK = 0.5F;
@@ -32,9 +37,10 @@ public class VenomStackEffect extends MobEffect {
 		super(category, color, ModParticles.VENOM_DRIP);
 	}
 
-	/** The most stacks this causer can build up: 10 with the Scorpion Tail in hand and the Viper's Diadem worn, else 5. */
+	/** The most stacks this causer can build up: 5, or 10 with the Scorpion Tail in hand and the Viper's Diadem worn, plus 2 for the Venom Crown set. */
 	public static int maxStacksFor(LivingEntity causer) {
-		return VipersDiademItem.boostsVenom(causer) ? MAX_STACKS_BOOSTED : MAX_STACKS;
+		int base = VipersDiademItem.boostsVenom(causer) ? MAX_STACKS_BOOSTED : MAX_STACKS;
+		return base + (ArmorSets.has(causer, CrystalFamily.VENOM_CROWN) ? SET_BONUS_STACKS : 0);
 	}
 
 	private static int stacksOf(LivingEntity target) {

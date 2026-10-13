@@ -30,6 +30,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 
 import at.donmatzos.prismaticrealms.PrismaticRealms;
+import at.donmatzos.prismaticrealms.armor.ArmorSetEffects;
 
 /**
  * Applies equipped artifacts' bonuses. Attribute modifiers are transient and rebuilt by refresh() whenever the slots
@@ -79,7 +80,7 @@ public final class ArtifactEffects {
 	}
 
 	/**
-	 * The first equipped artifact that saves from death breaks: it leaves its slot, its modifiers go, and the wearer is
+	 * The first equipped artifact that saves from death breaks: it leaves its slot, its modifiers go (unless the wearer's armor set keeps it), and the wearer is
 	 * healed to the new full health. Returns true when death was prevented.
 	 */
 	private static boolean breakForDeath(ServerPlayer wearer, DamageSource source) {
@@ -90,8 +91,10 @@ public final class ArtifactEffects {
 		for (int i = 0; i < ArtifactRules.SLOTS; i++) {
 			ItemStack stack = slots.get(i);
 			if (stack.getItem() instanceof ArtifactItem artifact && artifact.savesFromDeath(wearer, source)) {
-				ArtifactSlots.set(wearer, slots.with(i, ItemStack.EMPTY));
-				refresh(wearer);
+				if (!ArmorSetEffects.keepsArtifact(wearer, artifact)) {
+					ArtifactSlots.set(wearer, slots.with(i, ItemStack.EMPTY));
+					refresh(wearer);
+				}
 				wearer.setHealth(wearer.getMaxHealth());
 				ArtifactBreakPayload.broadcast(wearer, stack);
 				return true;
