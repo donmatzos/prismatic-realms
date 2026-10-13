@@ -93,6 +93,13 @@ A star pendant made from an Ice Star crystal, two Ice Star shards and **blue ice
 - Magma blocks don't hurt you (campfires, fire and lava still do).
 - You don't freeze in powder snow.
 
+### Sunblessed Talisman (Cruel Sun)
+
+A molten sun talisman made from a Cruel Sun crystal, two Cruel Sun shards and a **blaze rod** as the catalyst. While you wear it:
+
+- Blocks you mine drop **smelted**: whatever a furnace would make of each drop (raw iron → iron ingot, ancient debris → netherite scrap, sand → glass, logs → charcoal, cobblestone → stone, …). Fortune still multiplies the drops, and you get the furnace's experience on the spot. Mining with **Silk Touch** turns it off, so you can still collect ore blocks.
+- You're **immune to fire**: fire, burning, lava, magma blocks, campfires and fireballs don't hurt you, and flames go out right away. Lava still slows you down.
+
 ## Scythes
 
 Scythes are heavy, slow weapons: they hit harder than a sword of the same material, reach further, and sweep like swords. Sword enchantments work on them. In your hand they show a long reaper blade.
