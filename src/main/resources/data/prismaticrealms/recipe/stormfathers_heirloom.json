@@ -1,0 +1,9 @@
+{
+	"type": "prismaticrealms:altar",
+	"crystal": "prismaticrealms:storm_fang_crystal",
+	"shards": "prismaticrealms:storm_fang_shard",
+	"catalyst": "minecraft:breeze_rod",
+	"result": {
+		"id": "prismaticrealms:stormfathers_heirloom"
+	}
+}

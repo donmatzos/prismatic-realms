@@ -24,10 +24,10 @@ public final class ModEffects {
 	public static final Holder<MobEffect> BLEED = Registry.registerForHolder(BuiltInRegistries.MOB_EFFECT, PrismaticRealms.id("bleed"),
 			new BleedEffect(MobEffectCategory.HARMFUL, 0x8A0F1A));
 
-	/** Beneficial: movement speed +50 % for 3 seconds, given to the wielder by fully charged Blitz Slasher hits. */
+	/** Beneficial: movement speed +50 % for 3 seconds, given to the wielder by fully charged Blitz Slasher hits. ADD_MULTIPLIED_BASE, so it adds flat with Stormfather's Heirloom (base x 2, not x 2.25). */
 	public static final Holder<MobEffect> BLITZ_RUSH = Registry.registerForHolder(BuiltInRegistries.MOB_EFFECT, PrismaticRealms.id("blitz_rush"),
 			new BlitzRushEffect(MobEffectCategory.BENEFICIAL, 0xFFE04A)
-					.addAttributeModifier(Attributes.MOVEMENT_SPEED, PrismaticRealms.id("effect.blitz_rush"), 0.5, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+					.addAttributeModifier(Attributes.MOVEMENT_SPEED, PrismaticRealms.id("effect.blitz_rush"), 0.5, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
 
 	/** Beneficial marker: comes with Dolphin's Grace and Water Breathing; The Shallow Waters' hits heal in water while it lasts. */
 	public static final Holder<MobEffect> TIDECALLER = Registry.registerForHolder(BuiltInRegistries.MOB_EFFECT, PrismaticRealms.id("tidecaller"),

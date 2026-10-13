@@ -18,6 +18,7 @@ import net.minecraft.world.item.component.AttackRange;
 
 import at.donmatzos.prismaticrealms.PrismaticRealms;
 import at.donmatzos.prismaticrealms.artifact.FrostwalkerStarItem;
+import at.donmatzos.prismaticrealms.artifact.StormfathersHeirloomItem;
 import at.donmatzos.prismaticrealms.artifact.SunblessedTalismanItem;
 import at.donmatzos.prismaticrealms.pouch.ModComponents;
 import at.donmatzos.prismaticrealms.pouch.PouchContents;
@@ -88,6 +89,8 @@ public final class ModItems {
 	public static final Item FROSTWALKER_STAR = register("frostwalker_star", FrostwalkerStarItem::new, new Item.Properties());
 	// Cruel Sun artifact (SunblessedTalismanItem): mined blocks drop smelted; immune to fire and lava.
 	public static final Item SUNBLESSED_TALISMAN = register("sunblessed_talisman", SunblessedTalismanItem::new, new Item.Properties());
+	// Storm Fang artifact (StormfathersHeirloomItem): +50 % movement speed (adds flat with Blitz Rush) and storm step.
+	public static final Item STORMFATHERS_HEIRLOOM = register("stormfathers_heirloom", StormfathersHeirloomItem::new, new Item.Properties());
 
 	private ModItems() {
 	}
@@ -125,7 +128,7 @@ public final class ModItems {
 		});
 		CreativeModeTabEvents.modifyOutputEvent(INGREDIENTS_TAB).register(output -> output.insertAfter(Items.AMETHYST_SHARD, CRIMSON_SANGUIS_SHARD, CRIMSON_SANGUIS_CRYSTAL, CRUEL_SUN_SHARD, CRUEL_SUN_CRYSTAL, STORM_FANG_SHARD, STORM_FANG_CRYSTAL, OVERGROWN_PROSPERITY_SHARD, OVERGROWN_PROSPERITY_CRYSTAL, ICE_STAR_SHARD, ICE_STAR_CRYSTAL, CERULEAN_ABYSS_SHARD, CERULEAN_ABYSS_CRYSTAL, VENOM_CROWN_SHARD, VENOM_CROWN_CRYSTAL, SPECTRAL_BINDER, SPECTRAL_SETTING));
 		CreativeModeTabEvents.modifyOutputEvent(TOOLS_TAB).register(output -> output.insertAfter(Items.RECOVERY_COMPASS, DOWSING_ROD));
-		CreativeModeTabEvents.modifyOutputEvent(TOOLS_TAB).register(output -> output.insertAfter(Items.RECOVERY_COMPASS, FROSTWALKER_STAR, SUNBLESSED_TALISMAN));
+		CreativeModeTabEvents.modifyOutputEvent(TOOLS_TAB).register(output -> output.insertAfter(Items.RECOVERY_COMPASS, FROSTWALKER_STAR, SUNBLESSED_TALISMAN, STORMFATHERS_HEIRLOOM));
 		CreativeModeTabEvents.modifyOutputEvent(TOOLS_TAB).register(output -> output.insertAfter(Items.BUNDLE, CRYSTAL_POUCH, CRYSTAL_POUCH_PLUS_ONE, CRYSTAL_POUCH_PLUS_TWO));
 		CreativeModeTabEvents.modifyOutputEvent(INGREDIENTS_TAB).register(output -> output.insertAfter(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, CRYSTAL_POUCH_UPGRADE_PLUS_ONE, CRYSTAL_POUCH_UPGRADE_PLUS_TWO));
 	}

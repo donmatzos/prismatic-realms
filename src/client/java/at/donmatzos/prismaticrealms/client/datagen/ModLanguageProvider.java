@@ -73,6 +73,8 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 		translations.add("item.prismaticrealms.frostwalker_star.bonus", "Frostwalker Star – Freezes water and lava beneath you; immune to hot floors and freezing.");
 		translations.add(ModItems.SUNBLESSED_TALISMAN, "Sunblessed Talisman");
 		translations.add("item.prismaticrealms.sunblessed_talisman.bonus", "Sunblessed Talisman – Mined blocks drop smelted; immune to fire and lava.");
+		translations.add(ModItems.STORMFATHERS_HEIRLOOM, "Stormfather's Heirloom");
+		translations.add("item.prismaticrealms.stormfathers_heirloom.bonus", "Stormfather's Heirloom – 50% faster movement; walk up single blocks without jumping.");
 		translations.add("item.prismaticrealms.artifact", "Artifact (wear it in an artifact slot)");
 		translations.add("container.prismaticrealms.artifacts", "Artifact bonuses");
 		translations.add("container.prismaticrealms.artifacts.none", "No artifacts equipped");
