@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
+	"key": {
+		"c": "prismaticrealms:ice_star_crystal"
+	},
+	"pattern": [
+		"c c",
+		"ccc",
+		"ccc"
+	],
+	"result": {
+		"id": "prismaticrealms:ice_star_chestplate"
+	}
+}

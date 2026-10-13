@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"has_cerulean_abyss_crystal": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "prismaticrealms:cerulean_abyss_crystal"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipes": "prismaticrealms:cerulean_abyss_helmet"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_the_recipe",
+			"has_cerulean_abyss_crystal"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"prismaticrealms:cerulean_abyss_helmet"
+		]
+	}
+}

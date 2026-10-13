@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
+	"key": {
+		"c": "prismaticrealms:storm_fang_crystal"
+	},
+	"pattern": [
+		"ccc",
+		"c c"
+	],
+	"result": {
+		"id": "prismaticrealms:storm_fang_helmet"
+	}
+}

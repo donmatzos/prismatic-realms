@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
+	"key": {
+		"c": "prismaticrealms:ice_star_crystal"
+	},
+	"pattern": [
+		"ccc",
+		"c c",
+		"c c"
+	],
+	"result": {
+		"id": "prismaticrealms:ice_star_leggings"
+	}
+}

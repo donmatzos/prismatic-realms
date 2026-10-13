@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
+	"key": {
+		"c": "prismaticrealms:cruel_sun_crystal"
+	},
+	"pattern": [
+		"ccc",
+		"c c",
+		"c c"
+	],
+	"result": {
+		"id": "prismaticrealms:cruel_sun_leggings"
+	}
+}
