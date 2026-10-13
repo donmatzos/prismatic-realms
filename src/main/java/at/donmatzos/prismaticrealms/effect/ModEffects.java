@@ -29,7 +29,7 @@ public final class ModEffects {
 			new BlitzRushEffect(MobEffectCategory.BENEFICIAL, 0xFFE04A)
 					.addAttributeModifier(Attributes.MOVEMENT_SPEED, PrismaticRealms.id("effect.blitz_rush"), 0.5, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
 
-	/** Beneficial marker: comes with Dolphin's Grace and Water Breathing; The Shallow Waters' hits heal in water while it lasts. */
+	/** Beneficial marker (8 s): The Shallow Waters' hits heal 1, or 2 in water or rain, while it lasts. */
 	public static final Holder<MobEffect> TIDECALLER = Registry.registerForHolder(BuiltInRegistries.MOB_EFFECT, PrismaticRealms.id("tidecaller"),
 			new TidecallerEffect(MobEffectCategory.BENEFICIAL, 0x2FD8C8));
 

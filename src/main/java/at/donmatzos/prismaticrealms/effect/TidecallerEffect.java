@@ -8,8 +8,8 @@ import net.minecraft.world.entity.LivingEntity;
 import at.donmatzos.prismaticrealms.particle.ModParticles;
 
 /**
- * Tidecaller: a marker buff from The Shallow Waters' fully charged hits. It comes with vanilla Dolphin's Grace and Water
- * Breathing (applied alongside, see ShallowWatersItem), and while it lasts the scythe's hits heal its wielder in water.
+ * Tidecaller: a marker buff from The Shallow Waters' fully charged hits. While it lasts the scythe's hits heal its
+ * wielder, more while they're in water or rain (see ShallowWatersItem).
  * This class only adds the glowing teal motes rising off the wielder.
  */
 public class TidecallerEffect extends MobEffect {

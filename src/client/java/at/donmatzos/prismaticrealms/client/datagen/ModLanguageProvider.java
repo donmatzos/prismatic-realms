@@ -105,7 +105,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 		translations.add("item.prismaticrealms.scythe_of_the_frozen_expanse.effect", "Freeze – slows the target to 25% speed for 3s");
 		translations.add("item.prismaticrealms.scorpion_tail.effect", "Venom Stack – each hit adds a stack (up to 5) for 6s; more stacks, more poison damage");
 		translations.add("item.prismaticrealms.melting_sunray.effect", "Radiance – Fire Resistance for 6s; whoever hurts you catches fire");
-		translations.add("item.prismaticrealms.the_shallow_waters.effect", "Tidecaller – Dolphin's Grace and Water Breathing for 8s; in water, hits heal you");
+		translations.add("item.prismaticrealms.the_shallow_waters.effect", "Tidecaller – for 8s every hit heals you 1, or 2 while you're in water or rain");
 		translations.add("item.prismaticrealms.blitz_slasher.effect", "Blitz Rush – you move 50% faster for 3s");
 		translations.add("item.prismaticrealms.crimson_diabell.effect", "Bleed – 1 damage per second for 5s, 2 while the target keeps moving");
 		translations.add("item.prismaticrealms.overgrown_reaper.effect", "Leech Seed – drains 1 health per second for 5s and heals you by the same");
