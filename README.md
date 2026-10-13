@@ -68,7 +68,7 @@ Your inventory has an **artifact bar**: three slots on its right side (also on t
 
 Artifacts give passive bonuses, such as extra armour or speed, ongoing effects, or effects when you're hit, attack, mine or kill. Equipped artifacts drop when you die, like the rest of your inventory (`keepInventory` keeps them).
 
-Artifacts are crafted at the Spectral Altar. More family artifacts are on the way.
+Every artifact glows like an enchanted item. Artifacts are crafted at the Spectral Altar, one for each of the seven colour families.
 
 ### Spectral Altar
 
@@ -128,6 +128,14 @@ An acorn pendant on a silver chain, made from an Overgrown Prosperity crystal, t
 
 - Crops, saplings, stems, nether wart, sweet berry bushes and cocoa within 5 blocks of you grow **much faster** (several times the normal speed, on top of bone meal and water).
 - Breaking a **log** drops **double** the logs. Leaves, crops and everything else drop as usual.
+
+### Viper's Diadem (Venom Crown)
+
+A cobra pendant on a corroded iron chain, made from a Venom Crown crystal, two Venom Crown shards and a **fermented spider eye** as the catalyst. While you wear it:
+
+- **Toxic Aura:** hostile mobs within 6 blocks of you are always poisoned (Venom Stack II, about 1 damage per second). Passive mobs, pets, villagers and other players are not affected, and the aura never builds higher stacks by itself.
+- **Venomous Strike:** every fully charged melee hit adds a **Venom Stack** to the target, with any weapon.
+- With the **Scorpion Tail** in your hand, Venom Stacks go up to **10** instead of 5.
 
 ## Scythes
 

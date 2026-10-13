@@ -20,6 +20,7 @@ import at.donmatzos.prismaticrealms.PrismaticRealms;
 import at.donmatzos.prismaticrealms.artifact.AbyssalHeartItem;
 import at.donmatzos.prismaticrealms.artifact.BloodstoneChaliceItem;
 import at.donmatzos.prismaticrealms.artifact.VerdantAuraItem;
+import at.donmatzos.prismaticrealms.artifact.VipersDiademItem;
 import at.donmatzos.prismaticrealms.artifact.FrostwalkerStarItem;
 import at.donmatzos.prismaticrealms.artifact.StormfathersHeirloomItem;
 import at.donmatzos.prismaticrealms.artifact.SunblessedTalismanItem;
@@ -103,6 +104,9 @@ public final class ModItems {
 	// Overgrown Prosperity artifact (VerdantAuraItem): plants near you grow faster; broken logs drop double.
 	public static final Item VERDANT_AURA = register("verdant_aura", VerdantAuraItem::new, new Item.Properties());
 
+	// Venom Crown artifact (VipersDiademItem): toxic aura against hostile mobs and a Venom Stack on every charged hit.
+	public static final Item VIPERS_DIADEM = register("vipers_diadem", VipersDiademItem::new, new Item.Properties());
+
 	private ModItems() {
 	}
 
@@ -139,7 +143,7 @@ public final class ModItems {
 		});
 		CreativeModeTabEvents.modifyOutputEvent(INGREDIENTS_TAB).register(output -> output.insertAfter(Items.AMETHYST_SHARD, CRIMSON_SANGUIS_SHARD, CRIMSON_SANGUIS_CRYSTAL, CRUEL_SUN_SHARD, CRUEL_SUN_CRYSTAL, STORM_FANG_SHARD, STORM_FANG_CRYSTAL, OVERGROWN_PROSPERITY_SHARD, OVERGROWN_PROSPERITY_CRYSTAL, ICE_STAR_SHARD, ICE_STAR_CRYSTAL, CERULEAN_ABYSS_SHARD, CERULEAN_ABYSS_CRYSTAL, VENOM_CROWN_SHARD, VENOM_CROWN_CRYSTAL, SPECTRAL_BINDER, SPECTRAL_SETTING));
 		CreativeModeTabEvents.modifyOutputEvent(TOOLS_TAB).register(output -> output.insertAfter(Items.RECOVERY_COMPASS, DOWSING_ROD));
-		CreativeModeTabEvents.modifyOutputEvent(TOOLS_TAB).register(output -> output.insertAfter(Items.RECOVERY_COMPASS, FROSTWALKER_STAR, SUNBLESSED_TALISMAN, STORMFATHERS_HEIRLOOM, ABYSSAL_HEART, BLOODSTONE_CHALICE, VERDANT_AURA));
+		CreativeModeTabEvents.modifyOutputEvent(TOOLS_TAB).register(output -> output.insertAfter(Items.RECOVERY_COMPASS, FROSTWALKER_STAR, SUNBLESSED_TALISMAN, STORMFATHERS_HEIRLOOM, ABYSSAL_HEART, BLOODSTONE_CHALICE, VERDANT_AURA, VIPERS_DIADEM));
 		CreativeModeTabEvents.modifyOutputEvent(TOOLS_TAB).register(output -> output.insertAfter(Items.BUNDLE, CRYSTAL_POUCH, CRYSTAL_POUCH_PLUS_ONE, CRYSTAL_POUCH_PLUS_TWO));
 		CreativeModeTabEvents.modifyOutputEvent(INGREDIENTS_TAB).register(output -> output.insertAfter(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, CRYSTAL_POUCH_UPGRADE_PLUS_ONE, CRYSTAL_POUCH_UPGRADE_PLUS_TWO));
 	}

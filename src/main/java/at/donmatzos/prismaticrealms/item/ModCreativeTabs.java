@@ -63,6 +63,7 @@ public final class ModCreativeTabs {
 				output.accept(ModItems.ABYSSAL_HEART);
 				output.accept(ModItems.BLOODSTONE_CHALICE);
 				output.accept(ModItems.VERDANT_AURA);
+				output.accept(ModItems.VIPERS_DIADEM);
 				for (ModBlocks.CrystalOre ore : ModBlocks.CRYSTAL_ORES) {
 					output.accept(ore.stone());
 					output.accept(ore.deepslate());

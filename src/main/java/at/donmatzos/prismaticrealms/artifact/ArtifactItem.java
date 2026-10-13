@@ -5,6 +5,7 @@ import java.util.function.BiConsumer;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.damagesource.DamageSource;
@@ -20,12 +21,12 @@ import at.donmatzos.prismaticrealms.PrismaticRealms;
 
 /**
  * Base class for artifacts: items worn in the three artifact slots for passive bonuses. Override only what an artifact
- * needs. All hooks run on the server, only while the artifact is equipped. The bonus description (lang key
+ * needs. Every artifact has the enchantment glint, to set it apart from plain crystals. All hooks run on the server, only while the artifact is equipped. The bonus description (lang key
  * `<item key>.bonus`) is shown in the artifact screen and the tooltip.
  */
 public abstract class ArtifactItem extends Item {
 	protected ArtifactItem(Item.Properties properties) {
-		super(properties.stacksTo(1));
+		super(properties.stacksTo(1).component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true));
 	}
 
 	/** Attribute modifiers while equipped. Use modifierId(...) for their ids so they never collide. */
@@ -66,6 +67,10 @@ public abstract class ArtifactItem extends Item {
 	}
 
 	public void onAttack(ServerPlayer wearer, LivingEntity target, DamageSource source, float damage) {
+	}
+
+	/** The wearer's direct melee hit on `target` was fully charged (attack charge > 0.9); sweep targets don't count. */
+	public void onChargedHit(ServerPlayer wearer, LivingEntity target) {
 	}
 
 	public void onBlockBreak(ServerPlayer wearer, BlockPos pos, BlockState state) {
