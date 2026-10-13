@@ -25,6 +25,7 @@ import at.donmatzos.prismaticrealms.armor.bonus.SanguineVessel;
 import at.donmatzos.prismaticrealms.armor.bonus.SetBonus;
 import at.donmatzos.prismaticrealms.armor.bonus.SolarMantle;
 import at.donmatzos.prismaticrealms.armor.bonus.StaticCharge;
+import at.donmatzos.prismaticrealms.armor.bonus.ToxicCoat;
 import at.donmatzos.prismaticrealms.artifact.ArtifactItem;
 import at.donmatzos.prismaticrealms.family.CrystalFamily;
 
@@ -95,6 +96,7 @@ public final class ArmorSetEffects {
 		register(CrystalFamily.OVERGROWN_PROSPERITY, new Photosynthesis());
 		register(CrystalFamily.CERULEAN_ABYSS, new DeepDiver());
 		register(CrystalFamily.CRIMSON_SANGUIS, new SanguineVessel());
+		register(CrystalFamily.VENOM_CROWN, new ToxicCoat());
 		ServerPlayConnectionEvents.JOIN.register((listener, sender, server) -> ACTIVE.remove(listener.player.getUUID()));
 		ServerPlayerEvents.AFTER_RESPAWN.register((oldPlayer, newPlayer, alive) -> ACTIVE.remove(newPlayer.getUUID()));
 		ServerPlayConnectionEvents.DISCONNECT.register((listener, server) -> {
