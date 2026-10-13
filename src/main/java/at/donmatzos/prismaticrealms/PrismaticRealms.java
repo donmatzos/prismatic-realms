@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.Identifier;
 
+import at.donmatzos.prismaticrealms.artifact.ArtifactBreakPayload;
 import at.donmatzos.prismaticrealms.artifact.ArtifactEffects;
 import at.donmatzos.prismaticrealms.artifact.ArtifactSlots;
 import at.donmatzos.prismaticrealms.block.ModBlockEntities;
@@ -46,6 +47,7 @@ public class PrismaticRealms implements ModInitializer {
 		ModMenus.initialize();
 		ArtifactSlots.initialize();
 		ArtifactEffects.initialize();
+		ArtifactBreakPayload.initialize();
 		SelectPouchEntryPayload.initialize();
 		ChargedHitScytheItem.initialize();
 		ScytheHarvest.initialize();

@@ -48,6 +48,8 @@
   "item.prismaticrealms.artifact": "Artifact (wear it in an artifact slot)",
   "item.prismaticrealms.blitz_slasher": "Blitz Slasher",
   "item.prismaticrealms.blitz_slasher.effect": "Blitz Rush – you move 50% faster for 3s",
+  "item.prismaticrealms.bloodstone_chalice": "Bloodstone Chalice",
+  "item.prismaticrealms.bloodstone_chalice.bonus": "Bloodstone Chalice – +4 hearts; when you would die, it breaks instead and heals you to full health.",
   "item.prismaticrealms.cerulean_abyss_crystal": "Cerulean Abyss Crystal",
   "item.prismaticrealms.cerulean_abyss_shard": "Cerulean Abyss Shard",
   "item.prismaticrealms.charged_hit": "Charged hit:",

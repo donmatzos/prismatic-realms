@@ -45,6 +45,14 @@ public abstract class ArtifactItem extends Item {
 		return false;
 	}
 
+	/**
+	 * True when this artifact saves the wearer from lethal damage. It then breaks (leaves its slot, its modifiers go) and the
+	 * wearer is healed to full. Not asked for damage that bypasses invulnerability (void, /kill), like the Totem of Undying.
+	 */
+	public boolean savesFromDeath(ServerPlayer wearer, DamageSource source) {
+		return false;
+	}
+
 	/** Changes the drops of a block the wearer broke, while the loot is generated (before anything lands). */
 	public void modifyBlockDrops(ServerPlayer wearer, LootContext context, List<ItemStack> drops) {
 	}
