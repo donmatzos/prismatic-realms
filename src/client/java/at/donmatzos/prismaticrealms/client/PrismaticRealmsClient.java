@@ -12,6 +12,7 @@ import at.donmatzos.prismaticrealms.block.ModBlockEntities;
 import at.donmatzos.prismaticrealms.client.altar.SpectralAltarRenderer;
 import at.donmatzos.prismaticrealms.client.altar.SpectralAltarScreen;
 import at.donmatzos.prismaticrealms.client.artifact.ArtifactBar;
+import at.donmatzos.prismaticrealms.client.artifact.ArtifactBreakEffect;
 import at.donmatzos.prismaticrealms.client.mixin.AbstractContainerScreenAccessor;
 import at.donmatzos.prismaticrealms.client.particle.DripParticle;
 import at.donmatzos.prismaticrealms.client.particle.LeechSporeParticle;
@@ -28,6 +29,7 @@ public class PrismaticRealmsClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		ArtifactBar.initialize();
+		ArtifactBreakEffect.initialize();
 		ModTooltips.initialize();
 		MenuScreens.register(ModMenus.CRYSTAL_POUCH, CrystalPouchScreen::new);
 		MenuScreens.register(ModMenus.SPECTRAL_ALTAR, SpectralAltarScreen::new);

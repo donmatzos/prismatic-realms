@@ -115,6 +115,13 @@ A deep-blue heart pendant made from a Cerulean Abyss crystal, two Cerulean Abyss
 - You walk through water as fast as on land, like Depth Strider III.
 - You swim fast: Dolphin's Grace while you're in water (it fades shortly after you leave it, and never cuts a Dolphin's Grace potion short).
 
+### Bloodstone Chalice (Crimson Sanguis)
+
+A gold goblet made from a Crimson Sanguis crystal, two Crimson Sanguis shards and a **ghast tear** as the catalyst. While you wear it:
+
+- You have **4 extra hearts**.
+- **Blood Pact:** when you would die, the chalice breaks instead and heals you to full health, with the same animation as a Totem of Undying (showing the chalice, in red). The extra hearts go with it. It doesn't save you from the void or `/kill`, and a Totem of Undying in your hand is used first.
+
 ## Scythes
 
 Scythes are heavy, slow weapons: they hit harder than a sword of the same material, reach further, and sweep like swords. Sword enchantments work on them, except **Fire Aspect**: the unique scythes bring their own effects. In your hand they show a long reaper blade.

@@ -13,6 +13,8 @@ import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.tags.DamageTypeTags;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
@@ -67,6 +69,28 @@ public final class ArtifactEffects {
 		}
 	}
 
+	/**
+	 * The first equipped artifact that saves from death breaks: it leaves its slot, its modifiers go, and the wearer is
+	 * healed to the new full health. Returns true when death was prevented.
+	 */
+	private static boolean breakForDeath(ServerPlayer wearer, DamageSource source) {
+		if (source.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
+			return false;
+		}
+		ArtifactSlots slots = ArtifactSlots.of(wearer);
+		for (int i = 0; i < ArtifactRules.SLOTS; i++) {
+			ItemStack stack = slots.get(i);
+			if (stack.getItem() instanceof ArtifactItem artifact && artifact.savesFromDeath(wearer, source)) {
+				ArtifactSlots.set(wearer, slots.with(i, ItemStack.EMPTY));
+				refresh(wearer);
+				wearer.setHealth(wearer.getMaxHealth());
+				ArtifactBreakPayload.broadcast(wearer, stack);
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public static void initialize() {
 		ServerPlayConnectionEvents.JOIN.register((listener, sender, server) -> refresh(listener.player));
 		// Fabric copies the attachment (copyOnDeath) in its own AFTER_RESPAWN listener in the default phase; listener order
@@ -86,6 +110,9 @@ public final class ArtifactEffects {
 		});
 		ServerLivingEntityEvents.ALLOW_DAMAGE.register((entity, source, amount) ->
 				!(entity instanceof ServerPlayer wearer) || equipped(wearer).stream().noneMatch(artifact -> artifact.preventsDamage(wearer, source)));
+		// vanilla checks held totems before die(), so a held Totem of Undying is used up first
+		ServerLivingEntityEvents.ALLOW_DEATH.register((entity, source, amount) ->
+				!(entity instanceof ServerPlayer wearer) || !breakForDeath(wearer, source));
 		ServerLivingEntityEvents.AFTER_DAMAGE.register((entity, source, baseDamage, damage, blocked) -> {
 			if (entity instanceof ServerPlayer wearer) {
 				equipped(wearer).forEach(artifact -> artifact.onHurt(wearer, source, damage));

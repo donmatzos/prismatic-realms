@@ -1,0 +1,9 @@
+{
+	"type": "prismaticrealms:altar",
+	"crystal": "prismaticrealms:crimson_sanguis_crystal",
+	"shards": "prismaticrealms:crimson_sanguis_shard",
+	"catalyst": "minecraft:ghast_tear",
+	"result": {
+		"id": "prismaticrealms:bloodstone_chalice"
+	}
+}
