@@ -17,6 +17,7 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.component.AttackRange;
 
 import at.donmatzos.prismaticrealms.PrismaticRealms;
+import at.donmatzos.prismaticrealms.artifact.FrostwalkerStarItem;
 import at.donmatzos.prismaticrealms.artifact.TestArtifactItem;
 import at.donmatzos.prismaticrealms.pouch.ModComponents;
 import at.donmatzos.prismaticrealms.pouch.PouchContents;
@@ -85,6 +86,8 @@ public final class ModItems {
 			new Item.Properties().component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true));
 	// Creative-only artifact for testing the artifact system (+1 armour while equipped); not craftable.
 	public static final Item TEST_ARTIFACT = register("test_artifact", TestArtifactItem::new, new Item.Properties());
+	// Ice Star artifact (FrostwalkerStarItem): freezes water and lava underfoot; crafted at the Spectral Altar.
+	public static final Item FROSTWALKER_STAR = register("frostwalker_star", FrostwalkerStarItem::new, new Item.Properties());
 
 	private ModItems() {
 	}
@@ -122,6 +125,7 @@ public final class ModItems {
 		});
 		CreativeModeTabEvents.modifyOutputEvent(INGREDIENTS_TAB).register(output -> output.insertAfter(Items.AMETHYST_SHARD, CRIMSON_SANGUIS_SHARD, CRIMSON_SANGUIS_CRYSTAL, CRUEL_SUN_SHARD, CRUEL_SUN_CRYSTAL, STORM_FANG_SHARD, STORM_FANG_CRYSTAL, OVERGROWN_PROSPERITY_SHARD, OVERGROWN_PROSPERITY_CRYSTAL, ICE_STAR_SHARD, ICE_STAR_CRYSTAL, CERULEAN_ABYSS_SHARD, CERULEAN_ABYSS_CRYSTAL, VENOM_CROWN_SHARD, VENOM_CROWN_CRYSTAL, SPECTRAL_BINDER, SPECTRAL_SETTING));
 		CreativeModeTabEvents.modifyOutputEvent(TOOLS_TAB).register(output -> output.insertAfter(Items.RECOVERY_COMPASS, DOWSING_ROD));
+		CreativeModeTabEvents.modifyOutputEvent(TOOLS_TAB).register(output -> output.insertAfter(Items.RECOVERY_COMPASS, FROSTWALKER_STAR));
 		CreativeModeTabEvents.modifyOutputEvent(TOOLS_TAB).register(output -> output.insertAfter(Items.BUNDLE, CRYSTAL_POUCH, CRYSTAL_POUCH_PLUS_ONE, CRYSTAL_POUCH_PLUS_TWO));
 		CreativeModeTabEvents.modifyOutputEvent(INGREDIENTS_TAB).register(output -> output.insertAfter(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, CRYSTAL_POUCH_UPGRADE_PLUS_ONE, CRYSTAL_POUCH_UPGRADE_PLUS_TWO));
 	}
