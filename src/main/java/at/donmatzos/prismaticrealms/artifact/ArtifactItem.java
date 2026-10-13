@@ -5,6 +5,13 @@ import java.util.function.BiConsumer;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
@@ -77,6 +84,27 @@ public abstract class ArtifactItem extends Item {
 	}
 
 	public void onKill(ServerPlayer wearer, LivingEntity killed) {
+	}
+
+	/** Right click with the artifact in the main hand equips it into a free slot, unless it is already worn. */
+	@Override
+	public InteractionResult use(Level level, Player player, InteractionHand hand) {
+		if (hand != InteractionHand.MAIN_HAND) {
+			return InteractionResult.PASS;
+		}
+		ItemStack stack = player.getItemInHand(hand);
+		ArtifactSlots slots = ArtifactSlots.of(player);
+		int target = ArtifactRules.firstFreeSlot(slots.ids(), BuiltInRegistries.ITEM.getKey(this).toString(), true);
+		if (target < 0) {
+			return InteractionResult.PASS;
+		}
+		if (player instanceof ServerPlayer serverPlayer) {
+			ArtifactSlots.set(player, slots.with(target, stack.copyWithCount(1)));
+			ArtifactEffects.refresh(serverPlayer);
+			stack.consume(1, player);
+			level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ARMOR_EQUIP_GENERIC, SoundSource.PLAYERS, 1.0F, 1.0F);
+		}
+		return InteractionResult.SUCCESS;
 	}
 
 	public String bonusKey() {

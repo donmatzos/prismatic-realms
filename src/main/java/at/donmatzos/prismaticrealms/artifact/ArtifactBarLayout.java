@@ -1,8 +1,8 @@
 package at.donmatzos.prismaticrealms.artifact;
 
 /**
- * Geometry of the artifact bar, relative to the inventory window's top-left corner (plain Java, unit-tested). The panel
- * overlaps the window's right border so it looks attached; its three slots are stacked 18 px apart.
+ * Geometry of the artifact bar, relative to the inventory window's top-left corner (plain Java, unit-tested). The bar sits
+ * left of the window and overlaps its left border so it looks attached; its three slots are stacked 18 px apart.
  */
 public final class ArtifactBarLayout {
 	public static final int PANEL_WIDTH = 29;
@@ -13,10 +13,10 @@ public final class ArtifactBarLayout {
 	public record Layout(int panelX, int panelY, int slotX, int firstSlotY) {
 	}
 
-	/** Survival inventory (176 wide): slots at x 179, y 8/26/44, level with the top three armour slots. */
-	public static final Layout SURVIVAL = new Layout(172, 4, 179, 8);
-	/** Creative inventory tab (195 wide). */
-	public static final Layout CREATIVE = new Layout(191, 0, 198, 4);
+	/** Survival inventory: slots at x -18, y 8/26/44, level with the top three armour slots. */
+	public static final Layout SURVIVAL = new Layout(-25, 4, -18, 8);
+	/** Creative inventory tab. */
+	public static final Layout CREATIVE = new Layout(-25, 0, -18, 4);
 
 	private ArtifactBarLayout() {
 	}
@@ -42,10 +42,5 @@ public final class ArtifactBarLayout {
 			}
 		}
 		return false;
-	}
-
-	/** How far the bar sticks out past the window's right edge (things drawn right of the window must move this far). */
-	public static int rightOverhang(Layout layout, int imageWidth) {
-		return layout.panelX() + PANEL_WIDTH - imageWidth;
 	}
 }

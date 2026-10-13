@@ -13,6 +13,7 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.CreativeModeTab;
 
 import at.donmatzos.prismaticrealms.artifact.ArtifactBarLayout;
+import at.donmatzos.prismaticrealms.artifact.ArtifactBarState;
 import at.donmatzos.prismaticrealms.artifact.ArtifactRules;
 
 /**
@@ -47,7 +48,7 @@ public abstract class CreativeScreenArtifactMixin {
 	@Inject(method = "hasClickedOutside", at = @At("RETURN"), cancellable = true)
 	private void prismaticrealms$barIsInside(double mx, double my, int xo, int yo, CallbackInfoReturnable<Boolean> cir) {
 		CreativeModeInventoryScreen self = (CreativeModeInventoryScreen) (Object) this;
-		if (cir.getReturnValueZ() && self.isInventoryOpen() && ArtifactBarLayout.contains(ArtifactBarLayout.CREATIVE, mx, my, xo, yo)) {
+		if (cir.getReturnValueZ() && ArtifactBarState.isOpen() && self.isInventoryOpen() && ArtifactBarLayout.contains(ArtifactBarLayout.CREATIVE, mx, my, xo, yo)) {
 			this.hasClickedOutside = false;
 			cir.setReturnValue(false);
 		}

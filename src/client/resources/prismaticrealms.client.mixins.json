@@ -6,7 +6,8 @@
 		"SlotPositionAccessor",
 		"CreativeScreenArtifactMixin",
 		"RecipeBookScreenArtifactMixin",
-		"EffectsInInventoryArtifactMixin"],
+		"AbstractRecipeBookScreenAccessor",
+		"RecipeBookComponentArtifactMixin"],
 	"injectors": {
 		"defaultRequire": 1
 	},

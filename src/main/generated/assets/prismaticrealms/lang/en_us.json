@@ -17,6 +17,7 @@
   "block.prismaticrealms.venom_crown_ore": "Venom Crown Ore",
   "container.prismaticrealms.artifacts": "Artifact bonuses",
   "container.prismaticrealms.artifacts.none": "No artifacts equipped",
+  "container.prismaticrealms.artifacts.toggle": "Artifacts",
   "container.prismaticrealms.crystal_pouch.amount": "%1$s: %2$s / %3$s",
   "container.prismaticrealms.spectral_altar": "Spectral Altar",
   "container.prismaticrealms.spectral_altar.needs_fuel": "Needs 3 shards of fuel",

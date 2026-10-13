@@ -16,6 +16,9 @@ public interface AbstractContainerScreenAccessor {
 	@Accessor("leftPos")
 	int prismaticrealms$getLeftPos();
 
+	@Accessor("leftPos")
+	void prismaticrealms$setLeftPos(int leftPos);
+
 	@Accessor("topPos")
 	int prismaticrealms$getTopPos();
 
