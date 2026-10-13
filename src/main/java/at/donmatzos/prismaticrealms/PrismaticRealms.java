@@ -15,6 +15,7 @@ import at.donmatzos.prismaticrealms.item.ScytheEnchantments;
 import at.donmatzos.prismaticrealms.item.ScytheHarvest;
 import at.donmatzos.prismaticrealms.particle.ModParticles;
 import at.donmatzos.prismaticrealms.item.ModCreativeTabs;
+import at.donmatzos.prismaticrealms.item.FamilyArmor;
 import at.donmatzos.prismaticrealms.item.ModItems;
 import at.donmatzos.prismaticrealms.pouch.ModComponents;
 import at.donmatzos.prismaticrealms.pouch.ModMenus;
@@ -43,6 +44,7 @@ public class PrismaticRealms implements ModInitializer {
 		ModEffects.initialize();
 		ModComponents.initialize();
 		ModItems.initialize();
+		FamilyArmor.initialize();
 		ModRecipes.initialize();
 		ModMenus.initialize();
 		ArtifactSlots.initialize();

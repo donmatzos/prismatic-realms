@@ -1,0 +1,14 @@
+{
+	"layers": {
+		"humanoid": [
+			{
+				"texture": "prismaticrealms:venom_crown"
+			}
+		],
+		"humanoid_leggings": [
+			{
+				"texture": "prismaticrealms:venom_crown"
+			}
+		]
+	}
+}

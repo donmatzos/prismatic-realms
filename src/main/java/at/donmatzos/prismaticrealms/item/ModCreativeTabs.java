@@ -9,9 +9,11 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.equipment.ArmorType;
 
 import at.donmatzos.prismaticrealms.PrismaticRealms;
 import at.donmatzos.prismaticrealms.block.ModBlocks;
+import at.donmatzos.prismaticrealms.family.CrystalFamily;
 
 public final class ModCreativeTabs {
 	public static final ResourceKey<CreativeModeTab> PRISMATIC_REALMS_KEY = ResourceKey.create(Registries.CREATIVE_MODE_TAB, PrismaticRealms.id("prismatic_realms"));
@@ -50,6 +52,11 @@ public final class ModCreativeTabs {
 				output.accept(ModItems.THE_SHALLOW_WATERS);
 				output.accept(ModItems.MELTING_SUNRAY);
 				output.accept(ModItems.SCORPION_TAIL);
+				for (CrystalFamily family : CrystalFamily.values()) {
+					for (ArmorType type : FamilyArmor.TYPES) {
+						output.accept(FamilyArmor.piece(family, type));
+					}
+				}
 				output.accept(ModItems.DOWSING_ROD);
 				output.accept(ModItems.CRYSTAL_POUCH);
 				output.accept(ModItems.CRYSTAL_POUCH_PLUS_ONE);

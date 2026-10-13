@@ -17,7 +17,10 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.component.AttackRange;
 
 import at.donmatzos.prismaticrealms.PrismaticRealms;
+import net.minecraft.world.item.equipment.ArmorType;
+
 import at.donmatzos.prismaticrealms.artifact.AbyssalHeartItem;
+import at.donmatzos.prismaticrealms.family.CrystalFamily;
 import at.donmatzos.prismaticrealms.artifact.BloodstoneChaliceItem;
 import at.donmatzos.prismaticrealms.artifact.VerdantAuraItem;
 import at.donmatzos.prismaticrealms.artifact.VipersDiademItem;
@@ -110,7 +113,7 @@ public final class ModItems {
 	private ModItems() {
 	}
 
-	private static <T extends Item> T register(String path, Function<Item.Properties, T> factory, Item.Properties properties) {
+	static <T extends Item> T register(String path, Function<Item.Properties, T> factory, Item.Properties properties) {
 		ResourceKey<Item> key = ResourceKey.create(Registries.ITEM, PrismaticRealms.id(path));
 		return Registry.register(BuiltInRegistries.ITEM, key, factory.apply(properties.setId(key)));
 	}
@@ -140,6 +143,13 @@ public final class ModItems {
 			output.insertAfter(Items.IRON_SWORD, IRON_SCYTHE);
 			output.insertAfter(Items.DIAMOND_SWORD, DIAMOND_SCYTHE);
 			output.insertAfter(Items.NETHERITE_SWORD, NETHERITE_SCYTHE, SCYTHE_OF_THE_FROZEN_EXPANSE, OVERGROWN_REAPER, CRIMSON_DIABELL, BLITZ_SLASHER, THE_SHALLOW_WATERS, MELTING_SUNRAY, SCORPION_TAIL);
+		});
+		CreativeModeTabEvents.modifyOutputEvent(COMBAT_TAB).register(output -> {
+			for (CrystalFamily family : CrystalFamily.values()) {
+				for (ArmorType type : FamilyArmor.TYPES) {
+					output.insertAfter(Items.NETHERITE_BOOTS, FamilyArmor.piece(family, type));
+				}
+			}
 		});
 		CreativeModeTabEvents.modifyOutputEvent(INGREDIENTS_TAB).register(output -> output.insertAfter(Items.AMETHYST_SHARD, CRIMSON_SANGUIS_SHARD, CRIMSON_SANGUIS_CRYSTAL, CRUEL_SUN_SHARD, CRUEL_SUN_CRYSTAL, STORM_FANG_SHARD, STORM_FANG_CRYSTAL, OVERGROWN_PROSPERITY_SHARD, OVERGROWN_PROSPERITY_CRYSTAL, ICE_STAR_SHARD, ICE_STAR_CRYSTAL, CERULEAN_ABYSS_SHARD, CERULEAN_ABYSS_CRYSTAL, VENOM_CROWN_SHARD, VENOM_CROWN_CRYSTAL, SPECTRAL_BINDER, SPECTRAL_SETTING));
 		CreativeModeTabEvents.modifyOutputEvent(TOOLS_TAB).register(output -> output.insertAfter(Items.RECOVERY_COMPASS, DOWSING_ROD));

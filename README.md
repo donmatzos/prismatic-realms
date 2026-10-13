@@ -160,6 +160,10 @@ Each crystal family has its own unique scythe with netherite strength. It is cra
 
 Each effect has its own particles and status icon, and the scythe's tooltip describes it.
 
+## Family armor
+
+Each colour family has a full armor set (helmet, chestplate, leggings, boots) with the protection of netherite armor, recoloured and decorated in the family's colours. Repair it with the family's crystal. For now the sets are only available in the creative inventory; crafting is still to come.
+
 ## Planned
 
 - The **Light** and **Dark** endgame families.

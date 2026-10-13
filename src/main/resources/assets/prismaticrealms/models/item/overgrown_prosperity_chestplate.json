@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "prismaticrealms:item/overgrown_prosperity_chestplate"
+	}
+}
