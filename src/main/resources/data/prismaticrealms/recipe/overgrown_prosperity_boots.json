@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
+	"key": {
+		"c": "prismaticrealms:overgrown_prosperity_crystal"
+	},
+	"pattern": [
+		"c c",
+		"c c"
+	],
+	"result": {
+		"id": "prismaticrealms:overgrown_prosperity_boots"
+	}
+}

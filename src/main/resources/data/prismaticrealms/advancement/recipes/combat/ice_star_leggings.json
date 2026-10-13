@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"has_ice_star_crystal": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "prismaticrealms:ice_star_crystal"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipes": "prismaticrealms:ice_star_leggings"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_the_recipe",
+			"has_ice_star_crystal"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"prismaticrealms:ice_star_leggings"
+		]
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
+	"key": {
+		"c": "prismaticrealms:venom_crown_crystal"
+	},
+	"pattern": [
+		"ccc",
+		"c c",
+		"c c"
+	],
+	"result": {
+		"id": "prismaticrealms:venom_crown_leggings"
+	}
+}

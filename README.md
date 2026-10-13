@@ -162,7 +162,7 @@ Each effect has its own particles and status icon, and the scythe's tooltip desc
 
 ## Family armor
 
-Each colour family has a full armor set (helmet, chestplate, leggings, boots) with the protection of netherite armor, recoloured and decorated in the family's colours. Repair it with the family's crystal. For now the sets are only available in the creative inventory; crafting is still to come.
+Each colour family has a full armor set (helmet, chestplate, leggings, boots) with the protection of netherite armor, recoloured and decorated in the family's colours. Craft each piece like vanilla armor, with the family's crystals instead of ingots (helmet 5, chestplate 8, leggings 7, boots 4). Repair it with the family's crystal.
 
 ### Set bonuses
 

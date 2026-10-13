@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
+	"key": {
+		"c": "prismaticrealms:cerulean_abyss_crystal"
+	},
+	"pattern": [
+		"ccc",
+		"c c",
+		"c c"
+	],
+	"result": {
+		"id": "prismaticrealms:cerulean_abyss_leggings"
+	}
+}
