@@ -34,8 +34,9 @@ public class StaticCharge implements SetBonus {
 
 	@Override
 	public float modifyAttackDamage(ServerPlayer attacker, LivingEntity target, DamageSource source, float amount) {
-		// The damage mixin runs before vanilla's dead and invulnerability-frame checks; keep the charge for a hit that cannot land.
-		if (!target.isAlive() || target.getInvulnerableTime() > 10) {
+		// The damage mixin runs before vanilla's dead and invulnerability checks; keep the charge for a hit that cannot land
+		// (dead target, invulnerability frames, or an invulnerable target such as a creative player or an armor stand).
+		if (!target.isAlive() || target.getInvulnerableTime() > 10 || target.isInvulnerable()) {
 			return amount;
 		}
 		SprintCharge charge = this.charges.get(attacker.getUUID());

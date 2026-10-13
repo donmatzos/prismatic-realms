@@ -13,9 +13,9 @@ import net.minecraft.network.chat.TextColor;
 
 import at.donmatzos.prismaticrealms.artifact.ArtifactItem;
 import at.donmatzos.prismaticrealms.family.CrystalFamily;
-import at.donmatzos.prismaticrealms.item.FamilyArmor;
 import at.donmatzos.prismaticrealms.item.ChargedHitScytheItem;
 import at.donmatzos.prismaticrealms.item.CrystalPouchItem;
+import at.donmatzos.prismaticrealms.item.FamilyArmor;
 import at.donmatzos.prismaticrealms.item.ModItems;
 import at.donmatzos.prismaticrealms.pouch.PouchStorage;
 import at.donmatzos.prismaticrealms.pouch.PouchText;
@@ -59,8 +59,7 @@ public final class ModTooltips {
 						PouchText.grouped(storage.total(false)), PouchText.grouped(storage.total(true))).getString(), GREY))));
 			} else if (stack.is(ModItems.CRYSTAL_POUCH_UPGRADE_PLUS_ONE) || stack.is(ModItems.CRYSTAL_POUCH_UPGRADE_PLUS_TWO)) {
 				extra.addAll(wrap(List.of(new Segment(Component.translatable("item.prismaticrealms.crystal_pouch_upgrade.tooltip").getString(), GREY))));
-			} else if (FamilyArmor.familyOf(stack) != null) {
-				CrystalFamily family = FamilyArmor.familyOf(stack);
+			} else if (FamilyArmor.familyOf(stack) instanceof CrystalFamily family) {
 				extra.addAll(wrap(List.of(new Segment(Component.translatable("item.prismaticrealms.armor_set").getString(), GREY))));
 				extra.addAll(wrap(List.of(new Segment(Component.translatable("armor_set.prismaticrealms." + family.id()).getString(), Style.EMPTY.withColor(ChatFormatting.LIGHT_PURPLE)))));
 			} else if (stack.getItem() instanceof ArtifactItem artifact) {

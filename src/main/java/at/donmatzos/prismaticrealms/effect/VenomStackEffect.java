@@ -15,9 +15,10 @@ import at.donmatzos.prismaticrealms.particle.ModParticles;
 
 /**
  * Venom Stack: the amplifier is the number of stacks minus one. Once a second the target loses {@link #DAMAGE_PER_STACK}
- * health per stack, and violet and acid-green venom drips from it, more with more stacks. Every fully charged Scorpion Tail hit adds a
- * stack (up to {@link #MAX_STACKS}; the Venom Crown armor set raises each causer's maximum by 2, see {@link #maxStacksFor}) and resets the duration; when it runs out, all stacks go at once. A kill by the venom
- * counts for whoever applied it.
+ * health per stack, and violet and acid-green venom drips from it, more with more stacks. Every fully charged Scorpion Tail
+ * hit adds a stack (up to {@link #MAX_STACKS}; the Venom Crown armor set raises each causer's maximum by 2, see
+ * {@link #maxStacksFor}) and resets the duration; when it runs out, all stacks go at once. A kill by the venom counts for
+ * whoever applied it.
  */
 public class VenomStackEffect extends MobEffect {
 	public static final int DURATION_TICKS = 6 * 20;

@@ -30,7 +30,7 @@ public interface SetBonus {
 	default void addModifiers(BiConsumer<Holder<Attribute>, AttributeModifier> out) {
 	}
 
-	/** The set stopped being worn (piece removed, logout). Drop any per-player state. */
+	/** The set stopped being worn (piece removed), or per-player state is being reset on logout, join and respawn. Drop any per-player state. */
 	default void onDeactivate(ServerPlayer wearer) {
 	}
 
