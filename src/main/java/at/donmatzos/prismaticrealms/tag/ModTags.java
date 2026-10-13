@@ -13,6 +13,9 @@ public final class ModTags {
 	public static final TagKey<Item> HIGH_TIER_PICKAXES = TagKey.create(Registries.ITEM, PrismaticRealms.id("high_tier_pickaxes"));
 
 	public static final TagKey<Item> SCYTHES = TagKey.create(Registries.ITEM, PrismaticRealms.id("scythes"));
+	// Hand-written tags (data/prismaticrealms/tags/item/): every family's shard / crystal.
+	public static final TagKey<Item> SHARDS = TagKey.create(Registries.ITEM, PrismaticRealms.id("shards"));
+	public static final TagKey<Item> CRYSTALS = TagKey.create(Registries.ITEM, PrismaticRealms.id("crystals"));
 
 	public static final TagKey<Block> CRYSTAL_ORES = TagKey.create(Registries.BLOCK, PrismaticRealms.id("crystal_ores"));
 

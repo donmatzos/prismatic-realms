@@ -17,6 +17,7 @@ import at.donmatzos.prismaticrealms.item.ModItems;
 import at.donmatzos.prismaticrealms.pouch.ModComponents;
 import at.donmatzos.prismaticrealms.pouch.ModMenus;
 import at.donmatzos.prismaticrealms.pouch.SelectPouchEntryPayload;
+import at.donmatzos.prismaticrealms.recipe.ModRecipes;
 import at.donmatzos.prismaticrealms.world.ModWorldGen;
 
 import org.slf4j.Logger;
@@ -40,6 +41,7 @@ public class PrismaticRealms implements ModInitializer {
 		ModEffects.initialize();
 		ModComponents.initialize();
 		ModItems.initialize();
+		ModRecipes.initialize();
 		ModMenus.initialize();
 		ArtifactSlots.initialize();
 		ArtifactEffects.initialize();

@@ -37,6 +37,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 		translations.add(ModItems.VENOM_CROWN_SHARD, "Venom Crown Shard");
 		translations.add(ModItems.VENOM_CROWN_CRYSTAL, "Venom Crown Crystal");
 		translations.add(ModItems.SPECTRAL_BINDER, "Spectral Binder");
+		translations.add(ModItems.SPECTRAL_SETTING, "Spectral Setting");
 		translations.add(ModItems.WOODEN_SCYTHE, "Wooden Scythe");
 		translations.add(ModItems.STONE_SCYTHE, "Stone Scythe");
 		translations.add(ModItems.COPPER_SCYTHE, "Copper Scythe");

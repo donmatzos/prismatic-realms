@@ -35,6 +35,7 @@ public final class ModCreativeTabs {
 				output.accept(ModItems.VENOM_CROWN_SHARD);
 				output.accept(ModItems.VENOM_CROWN_CRYSTAL);
 				output.accept(ModItems.SPECTRAL_BINDER);
+				output.accept(ModItems.SPECTRAL_SETTING);
 				output.accept(ModItems.WOODEN_SCYTHE);
 				output.accept(ModItems.STONE_SCYTHE);
 				output.accept(ModItems.COPPER_SCYTHE);

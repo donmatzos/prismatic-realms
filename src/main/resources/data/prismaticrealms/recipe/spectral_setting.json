@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"key": {
+		"B": "prismaticrealms:spectral_binder",
+		"G": "minecraft:gold_ingot"
+	},
+	"pattern": [
+		" G ",
+		"GBG",
+		" G "
+	],
+	"result": {
+		"id": "prismaticrealms:spectral_setting"
+	}
+}
