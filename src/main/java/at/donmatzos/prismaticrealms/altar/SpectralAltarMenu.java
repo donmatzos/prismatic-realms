@@ -68,13 +68,14 @@ public class SpectralAltarMenu extends AbstractContainerMenu {
 		super(ModMenus.SPECTRAL_ALTAR, containerId);
 		this.access = access;
 		this.level = inventory.player.level();
+		// Positions follow vanilla's crafting table (the plus of its 3x3 grid, its result slot), so the screen reuses its art.
 		// addSlot order is the slot index: the right shard (2) comes before the setting (3) though it sits right of it
-		this.addSlot(new Slot(this.inputs, CRYSTAL_SLOT, 62, 17));
-		this.addSlot(new Slot(this.inputs, LEFT_SHARD_SLOT, 44, 35));
-		this.addSlot(new Slot(this.inputs, RIGHT_SHARD_SLOT, 80, 35));
-		this.addSlot(new Slot(this.inputs, SETTING_SLOT, 62, 35));
-		this.addSlot(new Slot(this.inputs, CATALYST_SLOT, 62, 53));
-		this.addSlot(new Slot(this.inputs, FUEL_SLOT, 20, 53) {
+		this.addSlot(new Slot(this.inputs, CRYSTAL_SLOT, 48, 17));
+		this.addSlot(new Slot(this.inputs, LEFT_SHARD_SLOT, 30, 35));
+		this.addSlot(new Slot(this.inputs, RIGHT_SHARD_SLOT, 66, 35));
+		this.addSlot(new Slot(this.inputs, SETTING_SLOT, 48, 35));
+		this.addSlot(new Slot(this.inputs, CATALYST_SLOT, 48, 53));
+		this.addSlot(new Slot(this.inputs, FUEL_SLOT, 8, 53) {
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return stack.is(ModTags.SHARDS);
@@ -85,7 +86,7 @@ public class SpectralAltarMenu extends AbstractContainerMenu {
 				return FUEL_SLOT_ICON;
 			}
 		});
-		this.addSlot(new Slot(this.result, 0, 134, 35) {
+		this.addSlot(new Slot(this.result, 0, 124, 35) {
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return false;
