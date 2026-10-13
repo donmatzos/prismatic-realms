@@ -29,13 +29,14 @@ public final class ModEffects {
 			new BlitzRushEffect(MobEffectCategory.BENEFICIAL, 0xFFE04A)
 					.addAttributeModifier(Attributes.MOVEMENT_SPEED, PrismaticRealms.id("effect.blitz_rush"), 0.5, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
 
-	/** Beneficial marker: comes with Dolphin's Grace and Water Breathing; The Shallow Waters' hits heal in water while it lasts. */
+	/** Beneficial marker (8 s): The Shallow Waters' hits heal 1, or 2 in water or rain, while it lasts. */
 	public static final Holder<MobEffect> TIDECALLER = Registry.registerForHolder(BuiltInRegistries.MOB_EFFECT, PrismaticRealms.id("tidecaller"),
 			new TidecallerEffect(MobEffectCategory.BENEFICIAL, 0x2FD8C8));
 
-	/** Beneficial: whoever damages the bearer catches fire; comes with Fire Resistance (Melting Sunray, fully charged hits). */
-	public static final Holder<MobEffect> RADIANCE = Registry.registerForHolder(BuiltInRegistries.MOB_EFFECT, PrismaticRealms.id("radiance"),
-			new RadianceEffect(MobEffectCategory.BENEFICIAL, 0xFFB52E));
+	/** Harmful: the target's armor is halved for 6 seconds (Melting Sunray, fully charged hits); refreshes, doesn't stack. */
+	public static final Holder<MobEffect> MELTDOWN = Registry.registerForHolder(BuiltInRegistries.MOB_EFFECT, PrismaticRealms.id("meltdown"),
+			new MeltdownEffect(MobEffectCategory.HARMFUL, 0xF2701E)
+					.addAttributeModifier(Attributes.ARMOR, PrismaticRealms.id("effect.meltdown"), -0.5, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
 
 	/** 0.5 damage per stack per second for 6 seconds; each fully charged Scorpion Tail hit adds a stack (max 5) and resets it. */
 	public static final Holder<MobEffect> VENOM_STACK = Registry.registerForHolder(BuiltInRegistries.MOB_EFFECT, PrismaticRealms.id("venom_stack"),

@@ -25,11 +25,13 @@ public final class ModParticles {
 	/** Glowing teal mote drifting upwards (the Tidecaller effect); rendered by RisingMoteParticle in teal. */
 	public static final SimpleParticleType TIDE_MOTE = Registry.register(BuiltInRegistries.PARTICLE_TYPE, PrismaticRealms.id("tide_mote"), FabricParticleTypes.simple());
 
-	/** Golden sun mote drifting upwards (the Radiance effect); rendered by RisingMoteParticle in gold. */
+	/** Golden sun mote drifting upwards; rendered by RisingMoteParticle in gold. Unused since Radiance was removed (2026-10-13); kept for later Cruel Sun visuals. */
 	public static final SimpleParticleType SUN_MOTE = Registry.register(BuiltInRegistries.PARTICLE_TYPE, PrismaticRealms.id("sun_mote"), FabricParticleTypes.simple());
 
 	/** Venom drop falling from a target (the Venom Stack effect); rendered by DripParticle, mostly violet, 30 % acid green. */
 	public static final SimpleParticleType VENOM_DRIP = Registry.register(BuiltInRegistries.PARTICLE_TYPE, PrismaticRealms.id("venom_drip"), FabricParticleTypes.simple());
+	/** Molten drop falling from a target (the Meltdown effect); rendered by DripParticle, molten orange, 30 % bright yellow. */
+	public static final SimpleParticleType MOLTEN_DRIP = Registry.register(BuiltInRegistries.PARTICLE_TYPE, PrismaticRealms.id("molten_drip"), FabricParticleTypes.simple());
 
 	private ModParticles() {
 	}

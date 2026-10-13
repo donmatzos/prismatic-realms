@@ -17,6 +17,7 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.component.AttackRange;
 
 import at.donmatzos.prismaticrealms.PrismaticRealms;
+import at.donmatzos.prismaticrealms.artifact.AbyssalHeartItem;
 import at.donmatzos.prismaticrealms.artifact.FrostwalkerStarItem;
 import at.donmatzos.prismaticrealms.artifact.StormfathersHeirloomItem;
 import at.donmatzos.prismaticrealms.artifact.SunblessedTalismanItem;
@@ -65,7 +66,7 @@ public final class ModItems {
 	public static final Item BLITZ_SLASHER = register("blitz_slasher", BlitzSlasherItem::new, scytheProperties(ToolMaterial.NETHERITE).repairable(STORM_FANG_CRYSTAL));
 	// Netherite scythe stats, repaired with Cerulean Abyss Crystals, plus Tidecaller for the wielder on fully charged hits (ShallowWatersItem).
 	public static final Item THE_SHALLOW_WATERS = register("the_shallow_waters", ShallowWatersItem::new, scytheProperties(ToolMaterial.NETHERITE).repairable(CERULEAN_ABYSS_CRYSTAL));
-	// Netherite scythe stats, repaired with Cruel Sun Crystals, plus Radiance for the wielder on fully charged hits (MeltingSunrayItem).
+	// Netherite scythe stats, repaired with Cruel Sun Crystals, plus Meltdown (target armor -50 %) on fully charged hits (MeltingSunrayItem).
 	public static final Item MELTING_SUNRAY = register("melting_sunray", MeltingSunrayItem::new, scytheProperties(ToolMaterial.NETHERITE).repairable(CRUEL_SUN_CRYSTAL));
 	// Netherite scythe stats, repaired with Venom Crown Crystals, plus Venom Stack on fully charged hits (ScorpionTailItem).
 	public static final Item SCORPION_TAIL = register("scorpion_tail", ScorpionTailItem::new, scytheProperties(ToolMaterial.NETHERITE).repairable(VENOM_CROWN_CRYSTAL));
@@ -91,6 +92,8 @@ public final class ModItems {
 	public static final Item SUNBLESSED_TALISMAN = register("sunblessed_talisman", SunblessedTalismanItem::new, new Item.Properties());
 	// Storm Fang artifact (StormfathersHeirloomItem): +50 % movement speed (adds flat with Blitz Rush) and storm step.
 	public static final Item STORMFATHERS_HEIRLOOM = register("stormfathers_heirloom", StormfathersHeirloomItem::new, new Item.Properties());
+	// Cerulean Abyss artifact (AbyssalHeartItem): endless breath, full walking speed and Dolphin's Grace in water.
+	public static final Item ABYSSAL_HEART = register("abyssal_heart", AbyssalHeartItem::new, new Item.Properties());
 
 	private ModItems() {
 	}
@@ -128,7 +131,7 @@ public final class ModItems {
 		});
 		CreativeModeTabEvents.modifyOutputEvent(INGREDIENTS_TAB).register(output -> output.insertAfter(Items.AMETHYST_SHARD, CRIMSON_SANGUIS_SHARD, CRIMSON_SANGUIS_CRYSTAL, CRUEL_SUN_SHARD, CRUEL_SUN_CRYSTAL, STORM_FANG_SHARD, STORM_FANG_CRYSTAL, OVERGROWN_PROSPERITY_SHARD, OVERGROWN_PROSPERITY_CRYSTAL, ICE_STAR_SHARD, ICE_STAR_CRYSTAL, CERULEAN_ABYSS_SHARD, CERULEAN_ABYSS_CRYSTAL, VENOM_CROWN_SHARD, VENOM_CROWN_CRYSTAL, SPECTRAL_BINDER, SPECTRAL_SETTING));
 		CreativeModeTabEvents.modifyOutputEvent(TOOLS_TAB).register(output -> output.insertAfter(Items.RECOVERY_COMPASS, DOWSING_ROD));
-		CreativeModeTabEvents.modifyOutputEvent(TOOLS_TAB).register(output -> output.insertAfter(Items.RECOVERY_COMPASS, FROSTWALKER_STAR, SUNBLESSED_TALISMAN, STORMFATHERS_HEIRLOOM));
+		CreativeModeTabEvents.modifyOutputEvent(TOOLS_TAB).register(output -> output.insertAfter(Items.RECOVERY_COMPASS, FROSTWALKER_STAR, SUNBLESSED_TALISMAN, STORMFATHERS_HEIRLOOM, ABYSSAL_HEART));
 		CreativeModeTabEvents.modifyOutputEvent(TOOLS_TAB).register(output -> output.insertAfter(Items.BUNDLE, CRYSTAL_POUCH, CRYSTAL_POUCH_PLUS_ONE, CRYSTAL_POUCH_PLUS_TWO));
 		CreativeModeTabEvents.modifyOutputEvent(INGREDIENTS_TAB).register(output -> output.insertAfter(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, CRYSTAL_POUCH_UPGRADE_PLUS_ONE, CRYSTAL_POUCH_UPGRADE_PLUS_TWO));
 	}

@@ -1,0 +1,9 @@
+{
+	"type": "prismaticrealms:altar",
+	"crystal": "prismaticrealms:cerulean_abyss_crystal",
+	"shards": "prismaticrealms:cerulean_abyss_shard",
+	"catalyst": "minecraft:nautilus_shell",
+	"result": {
+		"id": "prismaticrealms:abyssal_heart"
+	}
+}

@@ -44,6 +44,7 @@ public class PrismaticRealmsClient implements ClientModInitializer {
 		registry.register(ModParticles.LEECH_SPORE, LeechSporeParticle.Provider::new);
 		registry.register(ModParticles.BLOOD_DRIP, sprites -> new DripParticle.Provider(sprites, 0.42F, 0.03F, 0.06F));
 		registry.register(ModParticles.VENOM_DRIP, sprites -> new DripParticle.Provider(sprites, 0.62F, 0.28F, 0.84F, 0.56F, 0.82F, 0.16F, 0.3F));
+		registry.register(ModParticles.MOLTEN_DRIP, sprites -> new DripParticle.Provider(sprites, 0.95F, 0.44F, 0.12F, 1.0F, 0.76F, 0.24F, 0.3F));
 		registry.register(ModParticles.STATIC_SPARK, StaticSparkParticle.Provider::new);
 		registry.register(ModParticles.SUN_MOTE, sprites -> new RisingMoteParticle.Provider(sprites, 1.0F, 0.74F, 0.2F));
 		registry.register(ModParticles.TIDE_MOTE, sprites -> new RisingMoteParticle.Provider(sprites, 0.44F, 0.96F, 0.86F));
