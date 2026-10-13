@@ -17,6 +17,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -56,6 +57,14 @@ public final class ModBlocks {
 			.requiresCorrectToolForDrops()
 			.lightLevel(state -> 7)
 			.strength(5.0F, 1200.0F));
+	// Lava frozen by the Frostwalker Star (RimedMagmaBlock): like frosted ice, but opaque, normal friction, faint glow.
+	public static final Block RIMED_MAGMA = registerBlockOnly("rimed_magma", RimedMagmaBlock::new, BlockBehaviour.Properties.of()
+			.mapColor(MapColor.NETHER)
+			.strength(0.5F)
+			.sound(SoundType.GLASS)
+			.lightLevel(state -> 3)
+			.isValidSpawn(Blocks::never)
+			.isRedstoneConductor(Blocks::never));
 
 	private ModBlocks() {
 	}
@@ -84,6 +93,12 @@ public final class ModBlocks {
 		ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, PrismaticRealms.id(path));
 		Registry.register(BuiltInRegistries.ITEM, itemKey, new BlockItem(block, new Item.Properties().setId(itemKey).useBlockDescriptionPrefix()));
 		return block;
+	}
+
+	/** A block with no block item (not obtainable). */
+	private static Block registerBlockOnly(String path, Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties properties) {
+		ResourceKey<Block> key = ResourceKey.create(Registries.BLOCK, PrismaticRealms.id(path));
+		return Registry.register(BuiltInRegistries.BLOCK, key, factory.apply(properties.setId(key)));
 	}
 
 	public static void initialize() {

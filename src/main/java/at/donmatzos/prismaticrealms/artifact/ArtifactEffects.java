@@ -24,7 +24,7 @@ import at.donmatzos.prismaticrealms.PrismaticRealms;
 /**
  * Applies equipped artifacts' bonuses. Attribute modifiers are transient and rebuilt by refresh() whenever the slots
  * change, on join and on respawn (every artifact modifier is removed first, so nothing doubles or lingers). The other
- * hooks are dispatched from Fabric events; the tick hook runs once a second.
+ * hooks are dispatched from Fabric events; `tick` runs once a second, `tickMovement` every tick.
  */
 public final class ArtifactEffects {
 	private static final int TICK_INTERVAL = 20;
@@ -72,12 +72,18 @@ public final class ArtifactEffects {
 		ServerPlayerEvents.AFTER_RESPAWN.addPhaseOrdering(Event.DEFAULT_PHASE, AFTER_ATTACHMENTS);
 		ServerPlayerEvents.AFTER_RESPAWN.register(AFTER_ATTACHMENTS, (oldPlayer, newPlayer, alive) -> refresh(newPlayer));
 		ServerTickEvents.END_SERVER_TICK.register(server -> {
-			if (server.getTickCount() % TICK_INTERVAL == 0) {
-				for (ServerPlayer player : server.getPlayerList().getPlayers()) {
-					equipped(player).forEach(artifact -> artifact.tick(player));
+			boolean everySecond = server.getTickCount() % TICK_INTERVAL == 0;
+			for (ServerPlayer player : server.getPlayerList().getPlayers()) {
+				for (ArtifactItem artifact : equipped(player)) {
+					artifact.tickMovement(player);
+					if (everySecond) {
+						artifact.tick(player);
+					}
 				}
 			}
 		});
+		ServerLivingEntityEvents.ALLOW_DAMAGE.register((entity, source, amount) ->
+				!(entity instanceof ServerPlayer wearer) || equipped(wearer).stream().noneMatch(artifact -> artifact.preventsDamage(wearer, source)));
 		ServerLivingEntityEvents.AFTER_DAMAGE.register((entity, source, baseDamage, damage, blocked) -> {
 			if (entity instanceof ServerPlayer wearer) {
 				equipped(wearer).forEach(artifact -> artifact.onHurt(wearer, source, damage));

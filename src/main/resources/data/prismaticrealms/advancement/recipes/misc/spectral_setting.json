@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"has_binder": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": "prismaticrealms:spectral_binder"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipes": "prismaticrealms:spectral_setting"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_the_recipe",
+			"has_binder"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"prismaticrealms:spectral_setting"
+		]
+	}
+}

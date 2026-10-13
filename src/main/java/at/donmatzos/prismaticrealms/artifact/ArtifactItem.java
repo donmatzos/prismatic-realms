@@ -33,6 +33,20 @@ public abstract class ArtifactItem extends Item {
 	public void tick(ServerPlayer wearer) {
 	}
 
+	/** Called every server tick while equipped, for bonuses that follow the wearer's movement. Keep it cheap. */
+	public void tickMovement(ServerPlayer wearer) {
+	}
+
+	/** True cancels this damage before it's dealt (Fabric ALLOW_DAMAGE). */
+	public boolean preventsDamage(ServerPlayer wearer, DamageSource source) {
+		return false;
+	}
+
+	/** True makes the wearer immune to powder-snow freezing. Checked on both sides (the slots are synced to their owner). */
+	public boolean preventsFreezing() {
+		return false;
+	}
+
 	public void onHurt(ServerPlayer wearer, DamageSource source, float damage) {
 	}
 

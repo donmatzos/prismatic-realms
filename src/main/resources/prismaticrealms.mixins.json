@@ -7,7 +7,8 @@
 		"ItemEntityPouchMixin",
 		"PlayerArtifactDropMixin",
 		"InventoryMenuArtifactMixin",
-		"CreativeArtifactSlotMixin"
+		"CreativeArtifactSlotMixin",
+		"LivingEntityFreezeArtifactMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

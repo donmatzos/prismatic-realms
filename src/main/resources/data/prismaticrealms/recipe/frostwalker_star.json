@@ -1,0 +1,9 @@
+{
+	"type": "prismaticrealms:altar",
+	"crystal": "prismaticrealms:ice_star_crystal",
+	"shards": "prismaticrealms:ice_star_shard",
+	"catalyst": "minecraft:blue_ice",
+	"result": {
+		"id": "prismaticrealms:frostwalker_star"
+	}
+}

@@ -43,6 +43,7 @@ public class ModBlockLootProvider extends FabricBlockLootSubProvider {
 			this.add(ore.deepslate(), this.crystalOreDrops(ore.deepslate(), ore.shard()));
 		}
 		this.dropSelf(ModBlocks.SPECTRAL_ALTAR);
+		this.add(ModBlocks.RIMED_MAGMA, noDrop());
 	}
 
 	/**

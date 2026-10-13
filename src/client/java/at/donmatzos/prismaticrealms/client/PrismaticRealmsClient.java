@@ -10,6 +10,7 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 
 import at.donmatzos.prismaticrealms.block.ModBlockEntities;
 import at.donmatzos.prismaticrealms.client.altar.SpectralAltarRenderer;
+import at.donmatzos.prismaticrealms.client.altar.SpectralAltarScreen;
 import at.donmatzos.prismaticrealms.client.artifact.ArtifactBar;
 import at.donmatzos.prismaticrealms.client.mixin.AbstractContainerScreenAccessor;
 import at.donmatzos.prismaticrealms.client.particle.DripParticle;
@@ -29,6 +30,7 @@ public class PrismaticRealmsClient implements ClientModInitializer {
 		ArtifactBar.initialize();
 		ModTooltips.initialize();
 		MenuScreens.register(ModMenus.CRYSTAL_POUCH, CrystalPouchScreen::new);
+		MenuScreens.register(ModMenus.SPECTRAL_ALTAR, SpectralAltarScreen::new);
 		BlockEntityRenderers.register(ModBlockEntities.SPECTRAL_ALTAR, SpectralAltarRenderer::new);
 		ClientTooltipComponentCallback.EVENT.register(data -> data instanceof PouchTooltip pouch ? new ClientPouchTooltip(pouch) : null);
 		ScreenEvents.AFTER_INIT.register((client, screen, width, height) -> {

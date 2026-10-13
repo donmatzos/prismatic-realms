@@ -35,6 +35,7 @@ public final class ModCreativeTabs {
 				output.accept(ModItems.VENOM_CROWN_SHARD);
 				output.accept(ModItems.VENOM_CROWN_CRYSTAL);
 				output.accept(ModItems.SPECTRAL_BINDER);
+				output.accept(ModItems.SPECTRAL_SETTING);
 				output.accept(ModItems.WOODEN_SCYTHE);
 				output.accept(ModItems.STONE_SCYTHE);
 				output.accept(ModItems.COPPER_SCYTHE);
@@ -56,6 +57,7 @@ public final class ModCreativeTabs {
 				output.accept(ModItems.CRYSTAL_POUCH_UPGRADE_PLUS_ONE);
 				output.accept(ModItems.CRYSTAL_POUCH_UPGRADE_PLUS_TWO);
 				output.accept(ModBlocks.SPECTRAL_ALTAR);
+				output.accept(ModItems.FROSTWALKER_STAR);
 				output.accept(ModItems.TEST_ARTIFACT);
 				for (ModBlocks.CrystalOre ore : ModBlocks.CRYSTAL_ORES) {
 					output.accept(ore.stone());
